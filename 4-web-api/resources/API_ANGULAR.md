@@ -6,3 +6,6 @@
 * Add script tag
 * Add script bundle
 * [??] app.js
+
+### Resources
+* http://www.asp.net/web-api/overview/getting-started-with-aspnet-web-api/build-a-single-page-application-spa-with-aspnet-web-api-and-angularjs
