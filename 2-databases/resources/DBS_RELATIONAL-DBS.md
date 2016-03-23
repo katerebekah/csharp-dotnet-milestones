@@ -1,6 +1,6 @@
 # Relational Databases
 
-###### Everything here following is from Sonda's notes
+###### Almost everything here following is from Sonda's notes
 
 #### Document Oriented vs Relational Database
   * **Relational database**
@@ -33,10 +33,14 @@
 	 * type (i.e. integer, varchar)
 	 * constraints (i.e. NOT NULL, UNIQUE, etc)
 	* Typically in databases we almost always have an ID column, and they are typically sequential.
+* Schema = rules for how data is structured
+* ID column is **primary key**
+* **foreign key** ID key when it is used in a different table, to reference data in original table
 
 #### Talking to a Database
 
 ###### SQL Statements
+ * SQL keywords are written in CAPS
  * Basic Structure of a SQL statement:
 	`SELECT ______   
 	FROM ______
@@ -80,4 +84,4 @@
   * **Outer Join** matches two tables row for row but includes rows that are not paired up, aka rows that have a pair with a null in the other table.
 
 #### Other Resources
-* Eliza’s SQL homework with answers: https://gist.github.com/elizabrock/30b62c90a1ccfadbbdfe
+* http://tutorials.jumpstartlab.com/topics/fundamental_sql.html
