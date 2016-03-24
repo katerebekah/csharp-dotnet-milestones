@@ -4,10 +4,10 @@
 * `.cshtml` - filetype specific to Microsoft's MVC framework
   * Supports use of embedded C# inside html-syntax files using Razor syntax.
   * .cshtml files can be shared by multiple views, e.g.
-   * `_Layout`
+   * `_Layout.cshtml` - layout template = html markup for navbar, header, footer to be reflected in all webpages
    * `_Partials`
      * "Partial" = view not rendered by Controller, but called by other views
-
+   * `index.cshtml` - view template = 'content' only, for index page
 
 * `ActionLink` methods - method calls used to create anchor tags (`<href>`).
  * E.g.
