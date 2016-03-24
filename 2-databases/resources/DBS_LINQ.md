@@ -3,6 +3,7 @@
 * https://msdn.microsoft.com/library/bb397926.aspx
 * https://en.wikipedia.org/wiki/Language_Integrated_Query
 
+Anything that LINQ produces is IQueryable (an expression tree is created).
 ###### Sonda's Notes
 
 * **Dialect** - specific database-specific version of SQL language in order to query the database from your code. The ORM does that for you, so that you don’t have to learn dialects. The ORM automatically figures out what database you are running and then links the commands together.

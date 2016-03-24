@@ -41,5 +41,7 @@
 Relational databases are particularly strong at storing and querying highly structured data that have rich relationships.
 * Microsoft SQL Server, MySQL, Oracle and PostgreSQL are among the more famous relational database systems.
 
+#### Normalization
+* Don't put same data in 2 different places
 
 ######  N.B. There's more of Sonda's notes on DBs in the .rtf file in "Other Resources" folder.
