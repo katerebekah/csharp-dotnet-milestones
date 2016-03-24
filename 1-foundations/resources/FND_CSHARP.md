@@ -228,3 +228,7 @@ views, controllers, and routing can all be done with a general purpose language 
 * Each class has all the values and methods of the class that is inherited from.
   * Unlike in Javascript, in which if an object doesn’t have that method it would ask its superior, in C Sharp each instance has all the methods and such its parent has and will never ask the parent.
   * It’s like Darwin and passing DNA as opposed to the Chain of Command format of prototypes in Javascript.
+
+### Resources
+* http://www.ahuwanya.net/blog/post/introducing-csharp-pad
+* http://csharppad.com/

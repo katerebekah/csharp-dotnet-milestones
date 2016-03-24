@@ -1,5 +1,5 @@
 #  Simple Calculator Project
-Well-specified console-based exercise [Group Project ?]
+A well-specified console-based exercise [Group Project ?]
 * https://github.com/jcockhren/simple-calculator
 * After Chunk 4 go ​*back*​ to the README and be sure you implement the rest of the required features.
 * If finished early, then try:

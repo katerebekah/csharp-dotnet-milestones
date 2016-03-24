@@ -1,6 +1,6 @@
 # Potential Exercise Scoping for C# Foundation: Collections and IEnumerables
 
-One aspect of C# that students often struggle with during capstone development relates to all the variations of Lists, Collections and IEnumerables, and when to use which one.  They are covered in a peremptory fashion in later koans, but that's not the same as learning how to use them in a large app.
+One aspect of C# that students often struggle with during capstone development relates to all the variations of Lists, Collections and IEnumerables, and when to use which one.  They are covered in a peremptory fashion in later Koans, but that's not the same as learning how to use them in a large app.
 
 Typically, some version of IEnumerable is returned from the repository in a list or collection form.  Choosing "which of these to use when" is the biggest stumbling block - it may seem simple when first setting up the repo and accessing it, but then when those results are getting passed around to other methods, unanticipated problems can arise.
 
