@@ -19,7 +19,8 @@
 
 ### Understand Assemblies and References
 * what they are
-  * differences between assemblies and references
+  * assembly = compiled project
+  * reference = other name-space DLL that can be included
 * recognize whether necessary ones are already included or needed
   * what happens via codebase if needed but missing
   * how to manipulate necessary ones via Solution Explorer
