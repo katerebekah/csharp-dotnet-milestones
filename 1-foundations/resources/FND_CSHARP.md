@@ -13,7 +13,7 @@ string animalName () {
 }
 ```
 
-Copy pasta that code into a [C# Pad](http://csharppad.com/) window and click the **Go** button to compile it. Then type in `Console.WriteLine(animalName());` and press **Go** again and you'll see the output of "Lizard".
+Copy paste that code into a [C# Pad](http://csharppad.com/) window and click the **Go** button to compile it. Then type in `Console.WriteLine(animalName());` and press **Go** again and you'll see the output of "Lizard".
 
 With this method, you are telling the C# compiler that `animalName()` will always return a `string` value, and that the `name` variable will always contains a `string` value. If you violate this contract, the friendly compiler will tell you.
 

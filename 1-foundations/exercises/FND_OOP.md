@@ -11,12 +11,26 @@ Basics included:
  - shapes w/ different color fills
  - methods for calculating circumference, area of each shape
 
-Details, including implementation notes from Sonda, are in "Orphaned-for-Now" section, EXERCISES folder.
+E.g.
+* write tests for rhombus
+* inherit from Shape
+* to compile:
+  * generate stubs
+  * leave `throw new not implemented exception`
+  * run tests => fail
+  * then move other properties/fields from rectangle into rhombus
+  * get test of sidesCount() to pass
+
+Many of the key math/geometry details can be found @:  
+http://mathworld.wolfram.com/
+
+More details, including implementation notes from Sonda, are in "Orphaned-for-Now" section, EXERCISES folder.
 
 ### Dog OOP exercise
 Another perhaps simpler exercise involves various dog objects. That include inheritable differences such as:
  - size / weight
  - bark (woof vs. yip)
+ - wag (friendly, excited, etc.)
  - owner
  - species
  - name

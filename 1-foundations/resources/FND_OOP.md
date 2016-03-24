@@ -2,19 +2,22 @@
 
 There are four tenets of object oriented programming, and you encountered all of them during your experience with JavaScript, which itself is an object oriented language.
 
-## Inheritance with Classes
+***Inheritance with Classes***  - Receiving properties from a parent.  We taught you in the front end course how to handle inheritance in JavaScript with the prototypal style. In C#, you inherit with classes.
 
-We taught you in the front end course how to handle inheritance in JavaScript with the prototypal style. In C#, you inherit with classes.
+***Polymorphism*** - can solve same problem in multiple different ways.
 
-## Polymorphism
+***Encapsulation*** - All of an object's functions are grouped together at once, in a package or container.
 
-## Encapsulation
-
-## Abstraction
+***Abstraction*** - Cohesive organization, layers of abstraction.
 
 ### Principles of Object-Oriented Programming
 * does Jurnell have Lecture notes?
 
+***Virtual*** - expects override
+
+***Abstract*** - not expected to implement
+
+***`base();`*** - inherit fields and properties from parent, but do not construct new instance
 
 #### Sonda's Notes on Object Oriented Principles
 * it exists because this is how humans understand the world.

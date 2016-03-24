@@ -6,6 +6,9 @@
 * Figuring out how to // Arrange is the hard part (to get it to run).
 
 ## MOCKS
+
+Why Moq?  It isolates unit tests which are run in a random order and will modify DB if it is not isolated for the test.
+
 ### Read
 * http://martinfowler.com/articles/mocksArentStubs.html
 * Moq: an enjoyable mocking library for .NET ->
