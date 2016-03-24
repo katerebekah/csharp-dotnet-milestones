@@ -9,6 +9,9 @@
 
 Why Moq?  It isolates unit tests which are run in a random order and will modify DB if it is not isolated for the test.
 
+#### Stub methods
+When using Moq DB, if method() is called, don't execute full method - just return fake data.
+
 ### Read
 * http://martinfowler.com/articles/mocksArentStubs.html
 * Moq: an enjoyable mocking library for .NET ->
