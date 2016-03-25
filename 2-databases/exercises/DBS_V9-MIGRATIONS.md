@@ -2,10 +2,7 @@
 This exercise probably needs a good review/editing before it is ready for the students!
 
 
-1. Create a project to develop an animal database with the following columns:
-  * ID
-  * species
-  * average weight
+1. Create a project to develop an animal database with instances of the objects you've already created.  
 Seed the database with two entries, and ensure you can view them via the Server Explorer.
 
 2. Add a column to your model for 'habitat', and add a migration for it.
@@ -22,4 +19,4 @@ Seed the database with two entries, and ensure you can view them via the Server 
 
 8. Delete all the data in your database but keep the database itself.
 
-9. Using Windows File Explorer, locate your database files and delete them.  Then do whatever is necessary to start over and develop your database as you did initially to first include three columns, and then all five columns. 
+9. Using Windows File Explorer, locate your database files and delete them.  Then do whatever is necessary to start over and develop your database as you did initially to first include three columns, and then all five columns.
