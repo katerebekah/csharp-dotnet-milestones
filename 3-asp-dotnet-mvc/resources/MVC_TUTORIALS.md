@@ -1,11 +1,7 @@
 #Pluralsight (and other) Tutorials#
 
 ##Recommended:
-1. C# Fundamentals with Visual Studio 2015 
-(https://app.pluralsight.com/library/courses/c-sharp-fundamentals-with-visual-studio-2015/table-of-contents)
-5h20m by Scott Allen 9/25/2015
-	- Good info about C# language
-	- Will be most helpful in milestone 1
+
 1. Building a Web App with ASP.NET 5, MVC 6, EF 7, and angularjs
 (https://app.pluralsight.com/library/courses/aspdotnet-5-ef7-bootstrap-angular-web-app/table-of-contents)
 9h21m by Shawn Wildermuth 11/3/2015
