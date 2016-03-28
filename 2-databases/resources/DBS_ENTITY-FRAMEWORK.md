@@ -1,6 +1,7 @@
 # Entity Framework
 
 * https://msdn.microsoft.com/en-us/data/ee712907
+* http://www.entityframeworktutorial.net/
 
 ###### N.B. Everything here is from Sonda's Notes, but not in the same order that she had them.  This file probably needs major review / checking / correction.
 
@@ -15,7 +16,7 @@
 
 ### Connecting all the things
 ##### Connections
-* there are already connections that are in place between your program and your database. There is already a pool of connections in place where depending upon the operation, any call to pool data, and will use the connection to talk to the database.
+* There are already connections that are in place between your program and your database. There is already a pool of connections in place where depending upon the operation, any call to pool data, and will use the connection to talk to the database.
 * In the code, it will specify preregistered pathways that can be used and then you can use those connections over and over again, so the wait time is not as long for the O\RM
 
 ###### So how does this look?
