@@ -1,22 +1,22 @@
-# VS+DB Seeding and Migrations Exercise
-This exercise probably needs a good review/editing before it is ready for the students!
+# VS+DB Migrations Exercise
+
+This exercise builds upon the LINQ and EntityFramework exercise, and similarly needs a good review/editing before it is ready for the students!
 
 
-1. Create a project to develop an animal database with instances of the objects you've already created.  
-Seed the database with two entries, and ensure you can view them via the Server Explorer.
+1) Create a project to develop an animal database as you did for Entity Framework and LINQ.   
 
-2. Add a column to your model for 'habitat', and add a migration for it.
+2) Add a column to your model for 'habitat', and add a migration for it.
 
-3. Add another column to your model for 'diet' and add a migration for it.
+3) Add another column to your model for 'diet' and add a migration for it.
 
-4. View your database through Server Explorer and confirm that the two additional columns have been added.
+4) View your database through Server Explorer and confirm that the two additional columns have been added.
 
-5. View your migrations files and confirm that you can find the up migrations in your codebase.
+5) View your migrations files and confirm that you can find the up migrations in your codebase.
 
-6. Remove the project's Data Connections in your Server Explorer.  Try running your app and see what happens.
+6) Remove the project's Data Connections in your Server Explorer.  Try running your app and see what happens.
 
-7. Refresh the project's Data Connections in the Server Explorer and try to run your app again.  What happens?
+7) Refresh the project's Data Connections in the Server Explorer and try to run your app again.  What happens?
 
-8. Delete all the data in your database but keep the database itself.
+8) Delete all the data in your database but keep the database itself.
 
-9. Using Windows File Explorer, locate your database files and delete them.  Then do whatever is necessary to start over and develop your database as you did initially to first include three columns, and then all five columns.
+9) Using Windows File Explorer, locate your database files and delete them.  Then do whatever is necessary to start over and re-develop your database as you did initially to first include three columns, and then all five columns.
