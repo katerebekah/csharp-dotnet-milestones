@@ -9,3 +9,8 @@ A strongly typed, object oriented via classes, declarative and functional langua
 ## What is .NET and the CLR?
 
 ![.NET](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/DotNet.svg/300px-DotNet.svg.png)
+
+## Installs
+
++ Visit the [SQL Server Express 2014](https://www.microsoft.com/en-us/download/details.aspx?id=35579) page, click the download button and select the  `SQLEXPR_x64_ENU.exe` and the `	
+SQLManagementStudio_x64_ENU.exe` which installs the SQL Server Mangement Studio.
