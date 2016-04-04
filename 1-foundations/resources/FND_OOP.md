@@ -1,23 +1,104 @@
-# Object Oriented Programming
+# Object Oriented Programming 
 
 There are four tenets of object oriented programming, and you encountered all of them during your experience with JavaScript, which itself is an object oriented language.
 
-***Inheritance with Classes***  - Receiving properties from a parent.  We taught you in the front end course how to handle inheritance in JavaScript with the prototypal style. In C#, you inherit with classes.
+## Inheritance with Classes
 
-***Polymorphism*** - can solve same problem in multiple different ways.
+We taught you in the front end course how to handle inheritance in JavaScript with the prototypal style. In C#, you inherit with classes.
 
-***Encapsulation*** - All of an object's functions are grouped together at once, in a package or container.
+```c#
+// Base class
+class Animal {
+    // Simple properties
+    public string species { get; set; }
+    public double speed { get; set; }
+    public int legs { get; set; }
 
-***Abstraction*** - Cohesive organization, layers of abstraction.
+
+    // Public method
+    public void walk () {
+        Console.WriteLine("Base class walk method");
+        speed = speed + (0.1 * legs);
+    }
+}
+
+// Derived class
+class Lizard : Animal {
+    // Adding additional properties to what is inherited from Animal
+    public string scaleColor { get; set; }
+    public bool camouflage { get; set; }
+}
+
+Lizard larry = new Lizard();
+larry.legs = 4;
+larry.scaleColor = "Brown";
+larry.camouflage = false;
+larry.walk();
+Console.WriteLine("A {0} lizard moving at {1} m/s", larry.scaleColor, larry.speed);
+```
+
+## Polymorphism
+
+[Polymorphism](https://msdn.microsoft.com/en-us/library/ms173152.aspx) means that different objects may share the same set of properties and methods, but each may use those properties and methods to achieve different behavior.
+
+For example, in your base class of Animal, you define a general rule of how fast an Animal can walk. However, in the derived Lizard class, you can override that rule to give Lizards a slightly different behavior. For every leg they have, they can move twice as fast as a generic Animal.
+
+In C#, you use the `virtual` keyword on a method, which allows any derived class to have its own implementation. The derived class can then use the `override` keyword to tell the compiler that it is redefining the base class' method.
+
+```c#
+// Base class
+class Animal {
+    // Simple properties
+    public string species { get; set; }
+    public double speed { get; set; }
+    public int legs { get; set; }
+
+
+    // Public method that can be redefined by derived classes
+    public virtual void walk () {
+        Console.WriteLine("Animal class walk method");
+        speed = speed + (0.1 * legs);
+    }
+}
+
+// Derived class
+class Lizard : Animal {
+    // Adding additional properties to what is inherited from Animal
+    public string scaleColor { get; set; }
+    public bool camouflage { get; set; }
+
+    // Redefining the base class implementation
+    public override void walk () {
+        Console.WriteLine("Lizard class walk method");
+        speed = speed + (0.1 * legs);
+    }
+}
+
+// Create a Lizard
+Lizard larry = new Lizard();
+larry.legs = 4;
+larry.scaleColor = "Brown";
+larry.camouflage = false;
+larry.walk();
+
+Console.WriteLine("A {0} lizard moving at {1} m/s", larry.scaleColor, larry.speed);
+
+// Create an Animal
+Animal andy = new Animal();
+andy.legs = 4;
+andy.walk();
+
+Console.WriteLine("An animal moving at {0} m/s", andy.scaleColor, andy.speed);
+
+```
+
+## Encapsulation
+
+## Abstraction
 
 ### Principles of Object-Oriented Programming
 * does Jurnell have Lecture notes?
 
-***Virtual*** - expects override
-
-***Abstract*** - not expected to implement
-
-***`base();`*** - inherit fields and properties from parent, but do not construct new instance
 
 #### Sonda's Notes on Object Oriented Principles
 * it exists because this is how humans understand the world.
