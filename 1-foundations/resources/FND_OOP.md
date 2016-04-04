@@ -10,8 +10,8 @@ We taught you in the front end course how to handle inheritance in JavaScript wi
 // Base class
 class Animal {
     // Simple properties
+    private double speed = 0;
     public string species { get; set; }
-    public double speed { get; set; }
     public int legs { get; set; }
 
 
@@ -49,8 +49,8 @@ In C#, you use the `virtual` keyword on a method, which allows any derived class
 // Base class
 class Animal {
     // Simple properties
+    private double speed = 0;
     public string species { get; set; }
-    public double speed { get; set; }
     public int legs { get; set; }
 
 
@@ -94,23 +94,16 @@ Console.WriteLine("An animal moving at {0} m/s", andy.scaleColor, andy.speed);
 
 ## Encapsulation
 
+The encapsulation concept is all about defining what data needs to be manipulated, defining the methods that need to be exposed to manipulate the data, and then hiding the internal representation of that data. Our current code encapsulates all of the functionality needed to create a basic animal and make it walk.
+
+However, we hide the implementation of setting the speed of the animal since we want to control how it is set based on the simple algorithm in the `walk()` method.  That's called Information Hiding because no external actor (i.e. code) can access, or set, the walking speed of the animal. It can only specify the number of legs that the animal has.
+
+
 ## Abstraction
 
-### Principles of Object-Oriented Programming
-* does Jurnell have Lecture notes?
+As your code becomes more complex, Abstraction is the process that you, the developer, will go through to provide the most general, and hopefully simplest, way possible. This is done via multiple refactors of your code as complexity slowly works its way in.
 
-
-#### Sonda's Notes on Object Oriented Principles
-* it exists because this is how humans understand the world.
-* every object has an attribute. An attribute is a set of orthogonal features used to uniquely identify an object.
-###### Four Main Principles (memorize the things	!):
-  * **Inheritance** → the receiving of properties from a parent
-  * **Polymorphism** → Jurnell’s Definition: you can solve the same problem in many different ways, meaning there is no one right answer, but many possible ones that leads to the same solution. Eliza’s Definition: a type whose values and properties are similar to other types // the functionality you have in the base class can be propagated through the children
-  * **Encapsulation** → packaging code into containers in which others can interact with what’s inside this containers through specific access ways.
-  * **Abstraction** → encapsulating code such that it can be used again and again in a general way.
-
-* refactoring is one of the most important tools a developer can have in order to make the software more readable, efficient, etc.
-* data structures and linked lists doesn’t necessarily say anything about how you implement it. You will still need a specific way to implement this data to do something meaningful.
+With our current code, the `Animal` class is an abstraction of more specific animals that we create later, such as the Lizard.
 
 
 ## Resources
