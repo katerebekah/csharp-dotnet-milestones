@@ -35,4 +35,4 @@ Console.Write("I have a Squirrel named Nutsy who makes a noise
 that sounds like {0}. I'd rate  his cuteness as a {1}.", nutsy
 .Noise, nutsy.CutenessLevel);
 ```
-*Please note, you will type all of the above code into csharppad.com even though gitit would typically go into different files when using Visual Studio.*
+*Please note, you will type all of the above code into csharppad.com even though it would typically go into different files when using Visual Studio.*
