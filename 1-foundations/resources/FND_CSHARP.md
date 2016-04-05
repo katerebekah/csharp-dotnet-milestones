@@ -154,3 +154,11 @@ That's called namespacing.
 In C#, you can use the `namespace` keyword to create different namespaces.
 
 We can't use namespaces in C# Pad, so we'll wait until all installs are done.
+
+
+# External Resources
+
++ [C# Fundamentals with Visual Studio 2015](https://app.pluralsight.com/library/courses/c-sharp-fundamentals-with-visual-studio-2015/table-of-contents)
++ [Command Line Parameters](https://github.com/CoryFoy/DotNetKoans)
++ [Arrays](https://msdn.microsoft.com/en-us/library/aa288453%28v=vs.71%29.aspx)
++ [Lynda C# Tutorials](http://www.lynda.com/C-sharp-training-tutorials/1022-0.html)
