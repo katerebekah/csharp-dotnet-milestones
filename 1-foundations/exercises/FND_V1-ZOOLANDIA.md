@@ -1,6 +1,7 @@
 #Zoolandia- Version 1
 
 * Using csharppad.com, create an "Animal" Class. Your Animal class should include a Public string "AnimalName" that acts as a getter and a setter.
+*(It's probably a good idea to keep a copy of your code in sublime or visual studio since csharppad won't let you save your work)
 * Create a "Species" Class that inherits from the "Animal" Class. The Species class should include a public string "SpeciesName" that acts as a getter and a setter.
 * Create three or more different classes for individual animals you want to include in your zoo. Each individual animal class should inherit from "species" and should include a public string with getter and setter for "Noise". You should also include 3-4 more getter/setters of your own choosing. Try and use at least one int (integer) type and one bool (boolean).
 ```
