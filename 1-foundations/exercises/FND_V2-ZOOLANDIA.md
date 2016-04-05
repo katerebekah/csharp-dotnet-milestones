@@ -1,48 +1,50 @@
 #Zoolandia- Version 2
 ## Method OverridingS
 
-* Using csharppad.com, create an "Squirrel" Class. Your Squirrel class should include a method for "NumberOfLegs." Include the word "virtual" between the word "public" and the return type.
+* Using csharppad.com, create an "Squirrel" Class. Your Squirrel class should include a method for "Transportation." Include the word "virtual" between the word "public" and the return type.
 
 ```
 Example:
 
 public class Squirrel {
   public string Noise {get; set;}
-  public virtual int NumberOfLegs(int legs) {
-    return legs;
+  public virtual string Transportation() {
+    return "scurries";
   }
 }
 
 ```
 
-* Create a "CrippledSquirrel" Class. This class will inherit from "Squirrel". This time, create an override method for "NumberOfLegs" by replacing the word "virtual" with the word "override"
+* Create a "FlyingSquirrel" Class. This class will inherit from "Squirrel". This time, create an override method for "Transportation" by replacing the word "virtual" with the word "override"
 
 ```
-public class CrippledSquirrel : Squirrel {
+public class FlyingSquirrel : Squirrel {
   public bool FearOfCars {get; set;}
-  public override int NumberOfLegs(int legs) {
-    return legs - 1;
+  public override string Transportation() {
+    return "flies";
   }
 }
 
 ```
-* Create an instance of Squirrel and an instance of CrippedSquirrel
+* Create an instance of Squirrel and an instance of FlyingSquirrel
 
 ```
 Squirrel nutsy = new Squirrel();
-CrippledSquirrel pegleg = new CrippledSquirrel();
+FlyingSquirrel batman = new FlyingSquirrel();
 ```
 
-* Try out the NumberOfLegs method on each of  your squirrels.
+* Try out the Transportation method on each of  your squirrels.
 ```
-Console.WriteLine(nutsy.NumberOfLegs(2));
-Console.WriteLine(pegleg.NumberOfLegs(2));
+Console.WriteLine(nutsy.Transportation());
+Console.WriteLine(batman.Transportation());
 ```
 
 * Checkout what happens when you try something like:
 ```
-Squirrel mystery = new CrippledSquirrel();
+Squirrel mystery = new FlyingSquirrel();
 or
-CrippledSquirrel superMystery = new Squirrel();
+FlyingSquirrel superMystery = new Squirrel();
 ```
-* What is allowed? How many legs does your squirrel have?
+* What is allowed? How does your squirrel get around?
+
+*Create a "virtual" method on one of your classes and then create a new class that overrides that method. Remember that an override method need to accept the same number and type of arguments and must have the same name and return type as the method that it overrides.
