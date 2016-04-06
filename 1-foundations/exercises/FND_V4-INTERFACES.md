@@ -45,7 +45,7 @@ public interface ICanine
         //Add the methods for gettng the Habitat and Population
     }
 ```
-* Create a "Dog" Class that implements from the "ICanine" Interface. Create public properties for
+* Create a "Dog" Class that implements from the "ICanine" Interface. Create a public property for the Species Name
 ```
  class Dog : ICanine
     {
