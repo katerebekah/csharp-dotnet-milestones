@@ -17,6 +17,8 @@ STEPS:
 * Using csharppad.com, create an Interface called ICanine.
 * Add the following properties to ICanine.  Classes that implement ICanine must implement the following properties.
    ```   
+  class Dog : ICanine
+    {
         public int AverageLifeSpan { get; set; }
         public int AverageWeight { get; set; }
         public int GestationDays { get; set; }
@@ -26,6 +28,7 @@ STEPS:
         public string Diet { get; set; }
         public bool IsEndangered { get; set; }
         public string SpeciesName { get; set; }
+     }
 ```
 * ICanine needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
   ```     
@@ -51,9 +54,8 @@ public interface ICanine
 
 ```
 * Run your code. You should get an error stating that he properties and methods have not been implemented. The ICanine interface is   enforcing the contract with Dog.
-* Add the rest of the properties
-* Add the method that returns a string description of their habitat: GetHabitatBasedOnCountry(string countryCode) 
-It could be something like this:
+* Add the rest of the properties to the Dog class
+* Add the method that returns a string description of their habitat: GetHabitatBasedOnCountry(string countryCode). It could be   something like this:
 ```
   public string GetHabitatBasedOnCountry(string countryCode)
         {
@@ -64,6 +66,7 @@ It could be something like this:
             return "Habitat Unknown";
         }
 ```
+* You will need to implement the method called "GetPopulationBasedOnCountry(string country) in the Dog class
 * Run your code. If you have not implemented all of the properties and methods you will have errors. Fix the errors and once the code   compiles you are ready to create an instance of the Dog class.
 * Underneath the Dog class create an instance of the Dog class. 
 ```
