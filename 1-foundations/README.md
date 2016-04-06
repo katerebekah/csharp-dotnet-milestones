@@ -12,5 +12,7 @@ A strongly typed, object oriented via classes, declarative and functional langua
 
 ## Installs
 
++ Install [Visual Studio Community Edition](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx) which will be your coding environment while working with C# and .NET.
+
 + Visit the [SQL Server Express 2014](https://www.microsoft.com/en-us/download/details.aspx?id=35579) page, click the download button and select the  `SQLEXPR_x64_ENU.exe` and the `	
 SQLManagementStudio_x64_ENU.exe` which installs the SQL Server Mangement Studio.
