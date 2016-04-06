@@ -7,7 +7,7 @@
 ``` 
 Example:
 
-public class Squirrel: Species {
+class Squirrel: Species {
 	public string Noise {get; set;}
 	public bool Exotic {get; set;}
 	public string FavoriteFood {get; set;}
