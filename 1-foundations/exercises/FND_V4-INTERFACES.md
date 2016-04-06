@@ -50,7 +50,6 @@ public interface ICanine
  class Dog : ICanine
     {
        public string SpeciesName { get; set; }
-    
     }
 
 ```
