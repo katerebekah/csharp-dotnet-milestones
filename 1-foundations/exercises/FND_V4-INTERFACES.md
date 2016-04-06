@@ -32,10 +32,10 @@ STEPS:
      }
 ```
 * ICanine needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
- ```
+```
        string GetHabitatBasedOnCountry(string countryCode);
        int? GetPopulationBasedOnCountry(string countryCode);  
-    ```
+```
 * Create the interface like this:
 ```                
 public interface ICanine
