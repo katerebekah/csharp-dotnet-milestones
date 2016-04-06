@@ -9,7 +9,7 @@ Create a collection of objects that implement the class.
 
 An interface is defined a contract that all the classes implementing the interface should follow. A real world example would be a book interface, all books need pages, isbn number, pages, author, and many more properties. Typically interfaces are prefixed with "I", in this case we will work with an interface called "ICanine".
 
-Interfaces define properties, methods, and events, which are the members of the interface. Interfaces contain only the declaration of the members. It is the responsibility of the deriving class to implement the members. It often helps in providing a standard structure that the deriving classes would follow.
+Interfaces define properties, methods, and events, which are the members of the interface. Interfaces contain only the declaration of the members. It is the responsibility of the deriving class to implement the members. It often helps in providing a standard structure that the deriving classes must follow.
 
 In this exercise we will create an interface called ICanine. We will create three classes that implement ICanine. We will create three classes that implement ICanine, these classes will be Dog, Wolf, and Dingo.
 
