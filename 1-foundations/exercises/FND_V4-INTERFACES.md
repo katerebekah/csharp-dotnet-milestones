@@ -97,5 +97,6 @@ public interface ICanine
 * Display the properties of wolf on the console
 * Create a dingo class that implements ICanine
 * Create an instance of the dingo class
-* Display the properties of dingo on the console.
+* Display the properties of dingo on the console
+
 *Please note, you will type all of the above code into csharppad.com even though it would typically go into different files when using Visual Studio.*
