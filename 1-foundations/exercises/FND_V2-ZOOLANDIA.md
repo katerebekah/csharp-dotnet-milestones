@@ -1,5 +1,5 @@
 #Zoolandia- Version 2
-## Method OverridingS
+## Method Overriding
 
 * Using csharppad.com, create an "Squirrel" Class. Your Squirrel class should include a method for "Transportation." Include the word "virtual" between the word "public" and the return type.
 
