@@ -11,25 +11,29 @@ An interface is defined a contract that all the classes implementing the interfa
 
 Interfaces define properties, methods, and events, which are the members of the interface. Interfaces contain only the declaration of the members. It is the responsibility of the deriving class to implement the members. It often helps in providing a standard structure that the deriving classes would follow.
 
-In this exercise we will create an interface called ICanine. We will create three classes that implement ICanine. We will create three classes that implement ICanine, these classes will be Dog, Wolf, Dingo.
+In this exercise we will create an interface called ICanine. We will create three classes that implement ICanine. We will create three classes that implement ICanine, these classes will be Dog, Wolf, and Dingo.
 
 STEPS:
 * Using csharppad.com, create an Interface called ICanine.
-* Add the following public properties It needs to have the following public properties that will define a canine.
-        string SpeciesName  
-        string CommonName
-        bool IsDomestic 
-        bool IsEndangered 
-        int GestationDays
-        string CoatColor
-        string Diet
-        int AverageWeight
-        int AverageLifeSpan
-
-* It needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
-        string GetHabitatBasedOnCountry(string countryCode);
-        int? GetPopulationBasedOnCountry(string countryCode);  
+* Add the following properties to ICanine.  Classes that implement ICanine must implement the following properties.
+   ```   
+        public int AverageLifeSpan { get; set; }
+        public int AverageWeight { get; set; }
+        public int GestationDays { get; set; }
+        public string CoatColor { get; set; }
+        public string CommonName { get; set; }
+        public bool IsDomestic { get; set; }
+        public string Diet { get; set; }
+        public bool IsEndangered { get; set; }
+        public string SpeciesName { get; set; }
 ```
+* ICanine needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
+  ```     
+       string GetHabitatBasedOnCountry(string countryCode);
+       int? GetPopulationBasedOnCountry(string countryCode);  
+  ```
+* Create the interface like this:
+```                
 public interface ICanine
     {
        string SpeciesName { get; set; }
