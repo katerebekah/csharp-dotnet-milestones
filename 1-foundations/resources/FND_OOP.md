@@ -49,7 +49,7 @@ In C#, you use the `virtual` keyword on a method, which allows any derived class
 // Base class
 class Animal {
     // Simple properties
-    public double speed = { get; set; }
+    public double speed { get; set; }
     public string species { get; set; }
     public int legs { get; set; }
 
@@ -88,7 +88,7 @@ Animal andy = new Animal();
 andy.legs = 4;
 andy.walk();
 
-Console.WriteLine("An animal moving at {0} m/s", andy.scaleColor, andy.speed);
+Console.WriteLine("An animal moving at {0} m/s", andy.speed);
 
 ```
 
