@@ -1,13 +1,13 @@
 #Zoolandia- Version 1
 
-* Create a new repo in github. Initialize your repo with a README.md file. Click on the "add .gitignore button" and search for "visual studio." Select "visual studio" and create your repo. While working in csharppad, keep a copy of your code in sublime and push your code to github on a branch called "version 1."
+* Create a new repo in github. Initialize your repo with a README.md file DO NOT click "create repository" yet. Click on the "add .gitignore button" and search for "visual studio." Select "visual studio" and then create your repo. While working in csharppad, keep a copy of your code in sublime and push your code to github on a branch called "version 1."
 * Using csharppad.com, create an "Animal" Class. Your Animal class should include a Public string "AnimalName" that acts as a getter and a setter.
 * Create a "Species" Class that inherits from the "Animal" Class. The Species class should include a public string "SpeciesName" that acts as a getter and a setter.
 * Create three or more different classes for individual animals you want to include in your zoo. Each individual animal class should inherit from "species" and should include a public string with getter and setter for "Noise". You should also include 3-4 more getter/setters of your own choosing. Try and use at least one int (integer) type and one bool (boolean).
 ``` 
 Example:
 
-public class Squirrel: Species {
+class Squirrel: Species {
 	public string Noise {get; set;}
 	public bool Exotic {get; set;}
 	public string FavoriteFood {get; set;}
