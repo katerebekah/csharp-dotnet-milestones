@@ -10,7 +10,7 @@ We taught you in the front end course how to handle inheritance in JavaScript wi
 // Base class
 class Animal {
     // Simple properties
-    private double speed = 0;
+    public double speed = { get; set; }
     public string species { get; set; }
     public int legs { get; set; }
 
@@ -49,7 +49,7 @@ In C#, you use the `virtual` keyword on a method, which allows any derived class
 // Base class
 class Animal {
     // Simple properties
-    private double speed = 0;
+    public double speed = { get; set; }
     public string species { get; set; }
     public int legs { get; set; }
 
@@ -70,7 +70,7 @@ class Lizard : Animal {
     // Redefining the base class implementation
     public override void walk () {
         Console.WriteLine("Lizard class walk method");
-        speed = speed + (0.1 * legs);
+        speed = speed + (0.2 * legs);
     }
 }
 
