@@ -117,6 +117,7 @@ Console.WriteLine("adamWest  is a {0} out of 10 when it comes to cuteness!", ada
 ```
 * Once you've created overloaded constructor methods, you can explicitly go back and add the default constructor with zero methods.
 ```
+public class Squirrel {
 	public string Noise {get; set;}
 	public bool Exotic {get; set;}
 	public string FavoriteFood {get; set;}
