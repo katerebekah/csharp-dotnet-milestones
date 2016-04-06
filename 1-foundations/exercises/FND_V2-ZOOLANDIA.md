@@ -48,3 +48,33 @@ FlyingSquirrel superMystery = new Squirrel();
 * What is allowed? How does your squirrel get around?
 
 *Create a "virtual" method on one of your classes and then create a new class that overrides that method. Remember that an override method need to accept the same number and type of arguments and must have the same name and return type as the method that it overrides.
+
+-----
+
+* Create a constructor function for one (or all!) of your animal(s). the constructor function should set the initial name of all animals of that type to a name of your choosing.
+
+```
+public class Panda {
+  public string Name {get; set;}
+  public Panda() {
+    Name = "Po";
+  }
+}
+```
+* Check it out!
+```
+Panda goofy = new Panda();
+Console.WriteLine(goofy.Name);
+
+Panda mickey = new Panda();
+Console.WriteLine(mickey.Name);
+```
+* Chanage it up.
+
+```
+Panda goofy = new Panda();
+Console.WriteLine(goofy.Name);
+
+goofy.Name = "Super Goof";
+Console.WriteLine(goofy.Name);
+```
