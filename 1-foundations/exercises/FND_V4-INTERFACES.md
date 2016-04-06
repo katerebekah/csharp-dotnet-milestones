@@ -16,6 +16,7 @@ In this exercise we will create an interface called ICanine. We will create thre
 STEPS:
 * Using csharppad.com, create an Interface called ICanine.
 * Add the following properties to ICanine.  Classes that implement ICanine must implement the following properties.
+
    ```   
   class Dog : ICanine
     {
@@ -31,10 +32,10 @@ STEPS:
      }
 ```
 * ICanine needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
-  ```     
+ ```
        string GetHabitatBasedOnCountry(string countryCode);
        int? GetPopulationBasedOnCountry(string countryCode);  
-  ```
+    ```
 * Create the interface like this:
 ```                
 public interface ICanine
@@ -59,7 +60,7 @@ public interface ICanine
 ```
   public string GetHabitatBasedOnCountry(string countryCode)
         {
-            if (countryCode == "US"||countryCode=="CN")
+            if (countryCode == "United States"||countryCode=="Canada")
             {
                 return "Dogs are found throughout North America, mainly in house holds.";
             }
@@ -74,7 +75,7 @@ public interface ICanine
             {
                 GestationDays = 60,
                 //Set the rest of the properties
-    };
+            };
 ```
 
 
