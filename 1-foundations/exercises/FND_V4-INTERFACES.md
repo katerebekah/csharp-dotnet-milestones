@@ -36,15 +36,7 @@ STEPS:
        string GetHabitatBasedOnCountry(string countryCode);
        int? GetPopulationBasedOnCountry(string countryCode);  
 ```
-* Create the interface like this:
-```                
-public interface ICanine
-    {
-       string SpeciesName { get; set; }
-        //Add the rest of the properties
-        //Add the methods for gettng the Habitat and Population
-    }
-```
+
 * Create a "Dog" Class that implements from the "ICanine" Interface. Create a public property for the Species Name
 ```
  class Dog : ICanine
