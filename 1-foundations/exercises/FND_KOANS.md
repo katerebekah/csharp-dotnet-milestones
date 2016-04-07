@@ -12,7 +12,7 @@ This exercise walks you through major concepts in C# and dotnet while introducin
 
 ###Working the Koans
 * The first time you open the Koan Runner, you will see a message like the one pictured below
-![First Koans Message](img/KoanFirstMessage.PNG)
+![First Koans Message](../img/KoanFirstMessage.PNG)
 * Your job is to go to the appropriate "Koan" and change the code so that the assert will be true. The section that says "Please meditate on the following code" will give you good information on where to find the next Koan that needs fixing.
 * Once you have fixed the code, build the solution (Build > Build Solutions) and then save the solution. The Koan Runner should automatically refresh.
   * Problem: The Koans don't refresh: Make sure you built the solution before saving it
