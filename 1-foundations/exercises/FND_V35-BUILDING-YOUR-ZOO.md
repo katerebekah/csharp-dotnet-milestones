@@ -8,17 +8,18 @@
 ```
 public class Animal 
 {
-	
+	// add properties and methods
 }
 
 public class Equus : Animal 
 {
-	
+	//add properties and methods
 }
 
 public class Quagga : Equus
 {
 	string NormalName = "Zebra";
+	// add more properties and methods
 }
 ```
 * Once you've created all of your species, give them some methods and properties. Include several methods on your Animal and/or genus classes that can be overridden and then override them in your species classes.
