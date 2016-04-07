@@ -18,18 +18,18 @@ STEPS:
 * Add the following properties to ICanine.  Classes that implement ICanine must implement the following properties.
 
    ```   
-  class Dog : ICanine
+  public interface ICanine
     {
-        public int AverageLifeSpan { get; set; }
-        public int AverageWeight { get; set; }
-        public int GestationDays { get; set; }
-        public string CoatColor { get; set; }
-        public string CommonName { get; set; }
-        public bool IsDomestic { get; set; }
-        public string Diet { get; set; }
-        public bool IsEndangered { get; set; }
-        public string SpeciesName { get; set; }
-     }
+        string SpeciesName { get; set; }  //example-the scientific name for dog is Canis lupus familiaris
+        string CommonName { get; set; }//dog, coyote, wolf, dingo
+        bool IsDomestic { get; set; }
+        bool IsEndangered { get; set; }
+        int GestationDays { get; set; }
+        string CoatColor { get; set; }
+        string Diet { get; set; }
+        int AverageWeight { get; set; }
+        int AverageLifeSpan { get; set; }
+    }
 ```
 * ICanine needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
 ```
