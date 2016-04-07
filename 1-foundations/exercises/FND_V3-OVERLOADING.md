@@ -108,7 +108,7 @@ Squirrel adamWest = new Squirrel("bam!");
 Squirrel powderPuff = new Squirrel(10);
 
 Console.WriteLine("adamWest  makes a noise like {0}", adamWest.Noise);
-Console.WriteLine("powederPuff  is a {0} out of 10 when it comes to cuteness!", powederPuff.CutenessLevel);
+Console.WriteLine("powderPuff  is a {0} out of 10 when it comes to cuteness!", powderPuff.CutenessLevel);
 ```
 * You can also see what happens when you try to use variables that haven't been set
 ```
