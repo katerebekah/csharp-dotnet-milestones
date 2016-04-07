@@ -1,5 +1,4 @@
-C# Interactive Shell (6)
-close
+
 public interface ICanine
     {
         string SpeciesName { get; set; }  //example-the scientific name for dog is Canis lupus familiaris
