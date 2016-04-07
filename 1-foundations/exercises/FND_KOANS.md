@@ -6,7 +6,8 @@ This exercise walks you through major concepts in C# and dotnet while introducin
 * Use git bash shell to clone the repo into the directory of your choosing (think "workspaces")
 * Open the project in Visual Studio by opening the directory in file explorer and double-clicking on DotNetKoans.Sln (this is the project's solution file)
 * Go to `Build > Build Solutions`. It should run without errors.
-* In order to open the console that will run the Koans program, you need to use file explorer to navigate to whereYouPutStuff/DotNetKoans/AutoKoanRunner/Bin/Debug and find the file named AutoKoanRunner.exe
+* In order to open the console that will run the Koans program, you need to use file explorer to navigate to whereYouPutStuff/DotNetKoans/AutoKoanRunner/Bin/Debug and find the file named AutoKoanRunner.exe. Like so:
+![Finding Auto Koan Runner](../img/FindingKoanRunner.PNG)
 * If you don't want to navigate to this file every single time, it's a good idea to right click on the file now, select "pin to taskbar" or "pin to start menu (classic shell)"
 * Double click on AutoKoanRunner.exe to start the program
 
