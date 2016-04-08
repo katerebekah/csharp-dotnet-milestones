@@ -28,7 +28,7 @@ class SoccerBall : Ball
 
 ## Composition
 
-Composition is for things that make up other things. If the container object is destroyed, so will all of its composing parts.
+Composition is for things that make up other things. If the container object is destroyed, so will all of its composing parts. Composition is the pattern for part-of relationships.
 
 A pancreas is part of a body.
 
@@ -60,11 +60,11 @@ class Body
 
 ## Aggregation
 
-Aggregation is for adding objects that are needed for the operation of another object, but should exist independently of it should it be destroyed.
+Aggregation is for adding objects that are needed for the operation of another object, but should exist independently of it should it be destroyed. Aggregation is the pattern for has-a relationships.
 
 ```cs
 using System;
-using System.Collections.Generic.List;
+using System.Collections.Generic;
 
 class Customer
 {
@@ -78,7 +78,18 @@ class Bank
     public string name { get; set; }
     public string address { get; set; }
  
+    // Customers are aggregated into the bank
     public List<Customer> customers { get; set; }
+
+    public Bank ()
+    {
+        /*
+        Other objects that are part of a bank are 
+        composed during construction.
+         */
+        Building coolSprings = new Building();
+        ATM driveThru = new ATM();
+    }
 }
 
 // Create a bank
@@ -94,11 +105,19 @@ steve.accountNumber = "000000000";
 List<Customer> FTCustomers = new List<Customer>();
 FTCustomers.Add(steve);
 
+// Add another customer using in-line, concise syntax
+FTCustomers.Add(
+    new Customer() { 
+    firstName = "Caitlin",
+    lastName = "Stein",
+    accountNumber = "000000000" }
+);
+
 // Set the customers property of the bank to the created list
 FirstTennessee.customers = FTCustomers;
 
 // Iterate over the list of customers and display the first name
-foreach (Customer cust in FTCustomers.customers)
+foreach (Customer cust in FTCustomers)
 {
     Console.WriteLine(cust.firstName);
 }
