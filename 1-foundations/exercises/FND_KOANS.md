@@ -20,5 +20,7 @@ This exercise walks you through major concepts in C# and dotnet while introducin
   * Problem: The Koans refresh, but the file it references is VB.something instead of CSharp.something: Close the Koan Runner and open it back up again. It may also help to restart visual studio.
 * Please note that you will have to move into different files to complete all of the Koans and the Koan Runner doesn't go in alphabetic order (as they appear in solution explorer)
 
+![You know you were curious](../img/KoanDefinition.PNG)
+
 
 
