@@ -4,7 +4,7 @@
 
 ```bash
 cd ~/workspace/zoolandia
-git checkout -b version-4
+git checkout -b version-5
 ```
 
 ## Instructions
