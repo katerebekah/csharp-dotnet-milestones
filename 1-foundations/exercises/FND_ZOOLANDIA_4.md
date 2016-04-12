@@ -1,26 +1,42 @@
-#Zoolandia- Version 3.5
-## Creating your zoo
+# Zoolandia - Creating Your Zoo
 
-* Create a new repo in github. Initialize your repo with a README.md file DO NOT click "create repository" yet. Click on the "add .gitignore button" and search for "visual studio." Select "visual studio" and then create your repo. While working in csharppad, keep a copy of your code in sublime and push your code to github on a branch called "version 1." (if you've already done this, don't worry about doing it again)
-* Lovingly let go of any zoolanda code you've written so far. It was very useful practice, but you don't need to keep it forever.
-* Decide on 15+ species that you would like to include in your zoo and create a class for each species. 
-* Each species should inherit from the appropriate genus (in a class that you create), and each genus should inherit from a class called "Animal."
+## Setup
+
+```bash
+cd ~/workspace/zoolandia
+git checkout -b version-4
 ```
-public class Animal 
-{
-	// add properties and methods
-}
 
-public class Equus : Animal 
-{
-	//add properties and methods
-}
+## Instructions
 
-public class Quagga : Equus
-{
-	string NormalName = "Zebra";
-	// add more properties and methods
-}
-```
-* Once you've created all of your species, give them some methods and properties. Include several methods on your Animal and/or genus classes that can be overridden and then override them in your species classes.
-* Create some overloaded methods on some of your species (or genus) classes.
+1. Decide on at least 15 species that you would like to include in your zoo and create a class for each species. 
+1. Each species should inherit from the appropriate genus (in a class that you create), and each genus should inherit from the `Animal` class.
+
+    ```
+    // Base animal class
+    public class Animal 
+    {
+    	// add properties and methods
+    }
+
+    // Genus class, inherits from animal class
+    public class Equus : Animal 
+    {
+    	//add properties and methods
+    }
+
+    // Species class, inherits from the corresponding genus class
+    public class Quagga : Equus
+    {
+        string commonName = "Zebra";
+    	string scientificName = "Equus quagga";
+    	// add more properties and methods
+    }
+    ```
+1. Once you've created all of your species, give them some methods and properties. Include several methods on your Animal and/or genus classes that can be overridden and then override them in your species classes.
+1. Create some overloaded methods on some of your species (or genus) classes.
+
+
+## Notes
+
+This wil be the last exercise that you do in C# Pad. By the time you are done with this exercise, hopefully everyone has Windows and Visual Studio installed.
