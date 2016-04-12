@@ -1,93 +1,50 @@
-# Milestone 1 - Exercise V4 - Interfaces
+# Zoolandia - Relationships, Multiple Files, and Namespaces
 
-This lesson teaches C# Interfaces. Our objectives are as follows:
+## Setup
 
-Understand the Purpose of Interfaces.
-Define an Interface.
-Implement Interface Inheritance in a class.
-Create a collection of objects that implement the class.
-
-An interface is defined a contract that all the classes implementing the interface should follow. A real world example would be a book interface, all books need pages, isbn number, pages, author, and many more properties. Typically interfaces are prefixed with "I", in this case we will work with an interface called "ICanine".
-
-Interfaces define properties, methods, and events, which are the members of the interface. Interfaces contain only the declaration of the members. It is the responsibility of the deriving class to implement the members. It often helps in providing a standard structure that the deriving classes must follow.
-
-In this exercise we will create an interface called ICanine. We will create three classes that implement ICanine. We will create three classes that implement ICanine, these classes will be Dog, Wolf, and Dingo.
-
-STEPS:
-* Using csharppad.com, create an Interface called ICanine.
-* Add the following properties to ICanine.  Classes that implement ICanine must implement the following properties.
-
-   ```   
-  public interface ICanine
-    {
-        string SpeciesName { get; set; }  //example-the scientific name for dog is Canis lupus familiaris
-        string CommonName { get; set; }//dog, coyote, wolf, dingo
-        bool IsDomestic { get; set; }
-        bool IsEndangered { get; set; }
-        int GestationDays { get; set; }
-        string CoatColor { get; set; }
-        string Diet { get; set; }
-        int AverageWeight { get; set; }
-        int AverageLifeSpan { get; set; }
-    }
-```
-* ICanine needs to have two methods for obtaining the Habitat and Population of the canine based on country code. 
-```
-       string GetHabitatBasedOnCountry(string countryCode);
-       int? GetPopulationBasedOnCountry(string countryCode);  
+```bash
+cd ~/workspace/zoolandia
+git checkout -b version-4
 ```
 
-* Create a "Dog" Class that implements from the "ICanine" Interface. Create a public property for the Species Name
-```
- class Dog : ICanine
-    {
-       public string SpeciesName { get; set; }
-    }
+## Instructions
 
-```
-* Run your code. You should get an error stating that he properties and methods have not been implemented. The ICanine interface is   enforcing the contract with Dog.
-* Add the rest of the properties to the Dog class
-* Add the method that returns a string description of their habitat: GetHabitatBasedOnCountry(string countryCode). It could be   something like this:
-```
-  public string GetHabitatBasedOnCountry(string countryCode)
-        {
-            if (countryCode == "United States"||countryCode=="Canada")
-            {
-                return "Dogs are found throughout North America, mainly in house holds.";
-            }
-            return "Habitat Unknown";
-        }
-```
-* You will need to implement the method called "GetPopulationBasedOnCountry(string country) in the Dog class
-* Run your code. If you have not implemented all of the properties and methods you will have errors. Fix the errors and once the code   compiles you are ready to create an instance of the Dog class.
-* Underneath the Dog class create an instance of the Dog class. 
-```
-            Dog dog = new Dog
-            {
-                GestationDays = 60,
-                //Set the rest of the properties
-            };
-```
+You are going to start using Visual Studio to break up your code into different files, directories, and namspaces.
 
+## One Class, One File
 
-* Use your dog class to display properties related to this implementation of ICanine. You coud do something like this. Try to display as many properties as you can. 
-```
-   Console.Write("The scientific name for a dog is " + dog.SpeciesName + "\n");
-   Console.Write("Dogs like to eat " + dog.Diet );
-   Console.ReadLine();
-```
-*Use the methods called GetHabitatBasedOnCountryCode and GetPopulationBasedOnCountry. Display the values returned from these methods on the console. You could do something like this:
-```
-  var country="United States";
-  var dogPopulation=dog.GetPopulationBasedOnCountry(country);
-  Console.Write("Population for dogs is " + dogPopulation + " in " + country + "\n");
-```
-* Display dog habitat in the console. 
-* Create a wolf class that implements ICanine
-* Create an instance of the wolf class
-* Display the properties of wolf on the console
-* Create a dingo class that implements ICanine
-* Create an instance of the dingo class
-* Display the properties of dingo on the console
+1. Create a new solution in Visual Studio.
+1. Open up your `Zoolandia.cs` file where you've been saving all of your classes so far, and paste all of them into the `namespace` object in `Program.cs`.
+1. Each class in C# should live in its own file. Your job is to create a new file for each class that you have defined so far. You can either:
+  1. Right click the Zoolandia project, select *Add* and then choose *Class*. In the dialog box that appears, choose *Class* and give the file the same name as the class it will contain. For example, if the class' name is `Squirrel`, then name the file *Squirrel.cs*.
+  1. Use the ctrl+shift+c keyboard shortcut.
 
-*Please note, you will type all of the above code into csharppad.com even though it would typically go into different files when using Visual Studio.*
+## Sub-directories
+
+Creating sub-directories in your project is a way to accomplish code management at the physical file system, so that you don't end up with dozens of classes all in same level in your Solution Explorer.
+
+1. Right click your project in the Solution Explorer and add a folder named *Animals*.
+1. Now you can just click and drag all of your animal species classes into that new folder in Solution Explorer.
+1. Create some instances of your species in the `Main()` method, add some `Console.WriteLine()` statements to output some properties, and compile your project.
+1. Run your project and verify that it works as expected.
+
+## Namespaces
+
+Using namespaces is another way to organize your classes at the code level. Think of them as simple buckets in which related classes exist.
+
+1. Open each of the class files in the *Animals* directory and change the namespace to `Zoolandia.Animals`.
+1. Once that's done, look in the `Main()` method again you'll see that Visual Studio has red squiggles beneath the class names that you created instances of. This is because all of those classes now exist in a different namespace.
+1. To use that new namespace in this namespace (just Zoolandia), you use the `using` keyword. Add `using Zoolandia.Animals` at the top of *Program.cs*.
+1. Compile and run your program.
+
+## Refactoring
+
+Is a species a genus?
+
+Is a genus an animal?
+
+Isn't species a *property* of an animal instead?
+
+What if the genus was a property of the species?
+
+Read the [inheritance, composition, and aggregation](../resources/FND_INHERIT_COMPOSE_AGGREGATE.md) file again and refactor your code to have appropriate `is-a`, `part-of`, and `has-a` relationships.
