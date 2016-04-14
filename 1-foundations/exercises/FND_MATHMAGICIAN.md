@@ -1,38 +1,37 @@
-# Mathgician Exercise
+# Mathmagician
 
-Simple fun exercise to develop C# CLI app, w/ input/output
-* https://github.com/elizabrock/mathgician
+## Setup
 
-## Mathgician Exercise [from Sonda's notes]
-Completed code is @: https://github.com/elizabrock/mathgician
-1. Make a whole new C# application. File > New > Project > Choose C# > Pick Console Application.
-  * Call it “Mathgician” and it's ok to create a project and make sure git is checked.
-2. Make a WriteLine saying Press any key to exit.
-3. Then make a Readkey.
-  * So now, when it runs, you press a key and it exits.
-4. We want it to do math, so write: cw tab tab to make `console.writeline` “I am the MathGician. What shall I math?”
-  * The options will be Fibonacci, Primes, or Integers.
-5. Then to get the user to choose. `string = desiredMaths = Console.ReadLine ();`
-6. `Console.WriteLine(“Ok. I’m gonna do " + Choice);`
-  * The vision here is once it tells you what you want, it will spit out the numbers forever until you “ctrl exit”
+1. Create a new Visual Studio console solution named *MathMagician*.
+1. Create a matching project in your soltuion for unit tests (i.e. *MathMagicianTests*).
 
-* First, we have to if they ask for integers,  we do integers. * Otherwise, say “Well Actually …. I lied”
-[ See Eliza’s COMMITS.]
-* Now we have to populate the if statement to do what we want. We want to print every integer ever.
-  * Something like PrintIntegers(), right click on it to go to Generate > Method Stub. This is how to make a static void private method, which it will do down at the bottom.
-  * Inside the private method at the bottom, create a while loop with a WriteLine of nextInteger.
-    * Now when, you run, and select integers, it should run selecting all the integers in the land.
-[ See Eliza’s COMMITS.]
+## Instructions
 
-* Now we do the fibonacci sequence, which adds the two after.
-  * So create an else if.
-  * Within the if statements, make PrintFibonacciSequence(), right click > Generate > Method Stub.
-  * Within the private method at the bottom, we’ll make an int variable that is 0 and 1.
-  * Do another while true and within it, we first do a write line of the two variables.
-  * Then we use three variables to calculate the sequence.
-  * We will put a wait since it goes by so quickly with a Thread.Sleep(100). Now it will make a readable sequence in the console.
-  * If you want to change the name, right click > Refactor > Rename it and it ok. So that’s how we named prev to current.
+**Write your unit tests first**
 
-* For prime theoretically:
-  * Ask whether a variable is divisible by any of these numbers (2, 3, 4, 5, 11, 13).
-  * If variable is divisible by {2, 3, 4, 5, 11, 13},  add i to the primes list, and print i
+### Step 1
+
+Your program will have one class with three methods on it:
+
+1. `printIntegers()`
+1. `printFibonacci()`
+1. `printPrimes()`
+
+Write unit tests that will verify the output of each method. Do not write any implementation code until you have a unit test for each method that fails.
+
+### Step 2
+
+Create a simple implementation of a console application that displays a prompt to the user, and listens for a key press.
+
+1. Use `Console.WriteLine()` to output the message *Press any key to exit*.
+1. Use [`Readkey`](https://msdn.microsoft.com/en-us/library/system.console.readkey(v=vs.110).aspx), so that when your program runs, you press a key and it exits.
+
+### Step 3
+Now you'll write the implementation code for your three methods, and the operation of the program itself.
+
+1. We want it to do one of three mathematical operations. Update your prompt to be *I am the Math Magician. What would you like me to do?* The options will be Fibonacci, Primes, or Integers.
+1. Then to get the user to choose. `string = desiredMathProcess = Console.ReadLine ();`
+1. The goal here is that once the user tells the program what operation to perform, it will spit out the numbers forever until you “ctrl+c”.
+  `Console.WriteLine(“Ok. I’m going to help produce " + Choice);`
+1. Create the following three methods in your project:
+1. Use `Thread.Sleep(500)` when you output each number to the console to make each number legible (otherwise it goes too fast).
