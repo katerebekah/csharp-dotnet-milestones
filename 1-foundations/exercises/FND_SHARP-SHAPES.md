@@ -66,7 +66,7 @@ namespace SharpShapesTests
         public void TestShapeType ()
         {
             Shape simple = new Shape();
-            Assert.IsInstanceOf (typeof(Shape), simple);
+            Assert.IsInstanceOfType(simple, typeof(Shape));
         }
 
         [TestMethod]
