@@ -1,15 +1,5 @@
 # Relational Database Management System Concepts
 
-* https://en.wikipedia.org/wiki/Database
-
-### ACID Model
-* http://databases.about.com/od/specificproducts/a/acid.htm
-
-"In computer science, ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties that guarantee that database transactions are processed reliably. In the context of databases, a single logical operation on the data is called a transaction. For example, a transfer of funds from one bank account to another, even involving multiple changes such as debiting one account and crediting another, is a single transaction." [Wikipedia]
-
-
-##### Everything following from here is from Sonda's Notes
-
 #### Basic terminology  
 * A **database** is a data store.
   * Databases logically organize data into an abstraction of real-world concepts.
@@ -19,6 +9,13 @@
    * The database is the data and the metadata (for example, indexes) about that data.
    * The database management system is the software used to access and manipulate the data stored in the database.
 * Accessing and manipulating the data in the DB is typically referred to as the **CRUD** operations (Create, Read, Update, Delete).
+
+* https://en.wikipedia.org/wiki/Database
+
+### ACID Model
+* http://databases.about.com/od/specificproducts/a/acid.htm
+
+"In computer science, ACID (Atomicity, Consistency, Isolation, Durability) is a set of properties that guarantee that database transactions are processed reliably. In the context of databases, a single logical operation on the data is called a transaction. For example, a transfer of funds from one bank account to another, even involving multiple changes such as debiting one account and crediting another, is a single transaction." [Wikipedia]
 
 #### How can databases be stored?
 
@@ -44,4 +41,3 @@ Relational databases are particularly strong at storing and querying highly stru
 #### Normalization
 * Don't put same data in 2 different places
 
-######  N.B. There's more of Sonda's notes on DBs in the .rtf file in "Other Resources" folder.
