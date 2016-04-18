@@ -5,12 +5,13 @@
 ### Instructions
 
 1. Ensure you have the [Chinook Database](http://chinookdatabase.codeplex.com/) and [SQLite Manager Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) installed.
+1. Create a github repo for your answers. This repo will  only contain a README file in which you will write a short description of the exercise and where you can keep track of your answers.
 1. If you have trouble opening the SQLite Manager once it has been installed, try opening firefox, selecting "customize" at the bottom of the hamberger menu at the top right of the page. You can then drag SQLite Manager onto the toolbar where it will be easily accessible.
 1. Open SQLite Manager and select database < Connect Database and click on "Chinook_sqlite.sqlite".
 1. Go ahead and click around a little bit to familarize yourself with the database
 1. Optional, but helpful: draw an ERD of the Chinook database. Make sure to label primary keys, foreign keys, and indicate the type of relationship (one to one, one to many, many to many, etc) for each relationship.
 1. When you're ready to start the exercise, click the tab labeled "Execute SQL", type in your query, and click "Run SQL."
-1. If your query is correct (i.e. it returns the data requested below) copy and paste the query to your answer sheet(really, any file type you want). If your query doesn't return the expected results, try try again.
+1. If your query is correct (i.e. it returns the data requested below) copy and paste the query to your github README. If your query doesn't return the expected results, try try again.
 
 For each of the following exercises, provide the appropriate query. Yes, even the ones that are expressed in the form of questions. Everything from class and the [Sqlite Documentation](http://www.sqlite.org/) is fair game. No Sharing of Answers. 
 
