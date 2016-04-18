@@ -12,3 +12,4 @@
 
 Now you can open the MSDN article ["Create a SQL database by using a designer"](https://msdn.microsoft.com/en-us/library/ms233763.aspx#BKMK_CreateNewTbls) to walk through creating tables, foreign keys, and adding data.
 
+> **Note:** You can get the connection string to the database by right-clicking the DB in the Solution Explorer, and selecting *Properties*.
