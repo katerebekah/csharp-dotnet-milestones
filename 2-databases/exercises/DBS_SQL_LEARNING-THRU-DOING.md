@@ -1,5 +1,44 @@
 
-## Exercise or Quiz?:  Learning SQL through Doing
-This is using the Chinook database (http://chinookdatabase.codeplex.com/)
+## Learning SQL Through Doing
 
-* https://github.com/jcockhren/learning-sql
+
+### Instructions
+
+1. Ensure you have the [Chinook Database](http://chinookdatabase.codeplex.com/) and [SQLite Manager Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) installed.
+1. If you have trouble opening the SQLite Manager once it has been installed, try opening firefox, selecting "customize" at the bottom of the hamberger menu at the top right of the page. You can then drag SQLite Manager onto the toolbar where it will be easily accessible.
+1. Open SQLite Manager and select database < Connect Database and click on "Chinook_sqlite.sqlite".
+1. Go ahead and click around a little bit to familarize yourself with the database
+1. Optional, but helpful: draw an ERD of the Chinook database. Make sure to label primary keys, foreign keys, and indicate the type of relationship (one to one, one to many, many to many, etc) for each relationship.
+1. When you're ready to start the exercise, click the tab labeled "Execute SQL", type in your query, and click "Run SQL."
+1. If your query is correct (i.e. it returns the data requested below) copy and paste the query to your answer sheet(really, any file type you want). If your query doesn't return the expected results, try try again.
+
+For each of the following exercises, provide the appropriate query. Yes, even the ones that are expressed in the form of questions. Everything from class and the [Sqlite Documentation](http://www.sqlite.org/) is fair game. No Sharing of Answers. 
+
+1. Provide a query showing Customers (just their full names, customer ID and country) who are not in the US.
+2. Provide a query only showing the Customers from Brazil.
+3. Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.
+4. Provide a query showing only the Employees who are Sales Agents.
+5. Provide a query showing a unique list of billing countries from the Invoice table.
+6. Provide a query showing the invoices of customers who are from Brazil.
+7. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name. 
+8. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers. 
+9. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
+10. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
+11. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
+12. Provide a query that includes the track name with each invoice line item.
+13. Provide a query that includes the purchased track name AND artist name with each invoice line item.
+14. Provide a query that shows the # of invoices per country. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
+15. Provide a query that shows the total number of tracks in each playlist. The Playlist name should be include on the resulant table.
+16. Provide a query that shows all the Tracks, but displays no IDs. The resultant table should include the Album name, Media type and Genre.
+17. Provide a query that shows all Invoices but includes the # of invoice line items.
+18. Provide a query that shows total sales made by each sales agent.
+19. Which sales agent made the most in sales in 2009? HINT: [MAX](https://www.sqlite.org/lang_aggfunc.html#maxggunc)
+20. Which sales agent made the most in sales in 2010?
+21. Which sales agent made the most in sales over all?
+22. Provide a query that shows the # of customers assigned to each sales agent.
+23. Provide a query that shows the total sales per country. Which country's customers spent the most?
+24. Provide a query that shows the most purchased track of 2013.
+25. Provide a query that shows the top 5 most purchased tracks over all.
+26. Provide a query that shows the top 3 best selling artists.
+27. Provide a query that shows the most purchased Media Type.
+
