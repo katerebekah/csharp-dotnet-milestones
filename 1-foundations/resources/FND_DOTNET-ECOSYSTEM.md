@@ -1,14 +1,12 @@
-## .NET Overview
+# .NET Overview
 
-##### [including active coding of class project]
-
-##### Model
+## Model
 * Data Annotations & Regex
 * ORM / Entity Framework / Repository
 * Testing (including Mocks)
 * Patterns
 *
-##### View / Controller
+## View / Controller
 *	Action Results
 *	RESTful APIs
 *	Helper Methods
