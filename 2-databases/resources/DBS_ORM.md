@@ -2,7 +2,6 @@
 
 * https://en.wikipedia.org/wiki/Object-relational_mapping
 
-###### Sonda's Notes
 * ORM is Object Relational Mapping.
 * ORM is the translator mapping between the model and the specific database type so that they are able to talk to each other.
 * Object Relational Mapping means that it takes the objects in your code and lines them up with the data you have in your database.
