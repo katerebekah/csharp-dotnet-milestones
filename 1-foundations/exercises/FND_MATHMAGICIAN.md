@@ -3,7 +3,7 @@
 ## Setup
 
 1. Create a new Visual Studio console solution named *MathMagician*.
-1. Create a matching project in your soltuion for unit tests (i.e. *MathMagicianTests*).
+1. Create a matching project in your solution for unit tests (i.e. *MathMagicianTests*).
 
 ## Instructions
 
