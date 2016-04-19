@@ -20,7 +20,6 @@ For each of the following exercises, provide the appropriate query. Yes, even th
 3. Provide a query showing the Invoices of customers who are from Brazil. The resultant table should show the customer's full name, Invoice ID, Date of the invoice and billing country.
 4. Provide a query showing only the Employees who are Sales Agents.
 5. Provide a query showing a unique list of billing countries from the Invoice table.
-6. Provide a query showing the invoices of customers who are from Brazil.
 7. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name. 
 8. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers. 
 9. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
