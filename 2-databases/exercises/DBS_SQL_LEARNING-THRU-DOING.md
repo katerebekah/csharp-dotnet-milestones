@@ -22,7 +22,7 @@ For each of the following exercises, provide the appropriate query. Yes, even th
 1. Provide a query showing a unique list of billing countries from the Invoice table.
 1. Provide a query that shows the invoices associated with each sales agent. The resultant table should include the Sales Agent's full name. 
 1. Provide a query that shows the Invoice Total, Customer name, Country and Sale Agent name for all invoices and customers. 
-1. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?
+1. How many Invoices were there in 2009 and 2011? What are the respective total sales for each of those years?(include both the answers and the queries used to find the answers)
 1. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for Invoice ID 37.
 1. Looking at the InvoiceLine table, provide a query that COUNTs the number of line items for each Invoice. HINT: [GROUP BY](http://www.sqlite.org/lang_select.html#resultset)
 1. Provide a query that includes the track name with each invoice line item.
@@ -33,7 +33,6 @@ For each of the following exercises, provide the appropriate query. Yes, even th
 1. Provide a query that shows all Invoices but includes the # of invoice line items.
 1. Provide a query that shows total sales made by each sales agent.
 1. Which sales agent made the most in sales in 2009? HINT: [MAX](https://www.sqlite.org/lang_aggfunc.html#maxggunc)
-1. Which sales agent made the most in sales in 2010?
 1. Which sales agent made the most in sales over all?
 1. Provide a query that shows the # of customers assigned to each sales agent.
 1. Provide a query that shows the total sales per country. Which country's customers spent the most?
