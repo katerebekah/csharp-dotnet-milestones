@@ -1,7 +1,5 @@
 # Migrations
 
-###### => The first part of this file is from Sonda's notes, and probably should be checked for accuracy.
-
 ### What is a Migration and how do you update or recall a database structure change?
 * Migration has two types: schema and data.
 * Migration just means changing the structure of the database.
@@ -46,7 +44,6 @@ https://stackoverflow.com/questions/9769515/c-sharp-code-first-migration-up-down
 * It is same like install / uninstall the migration.
 * Only one of these methods is executed when you call update-database. To use Down method you must explicitly specify target migration for your upgrade. If the target migration is the old one, the migration API will automatically use Down method and downgrade your database.
 
-## The rest of this file is mostly from Jurnell, and therefore likely pretty correct
 
 ### Migrations Setup
 https://gist.github.com/jcockhren/4d58d603920c39f29f45

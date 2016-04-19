@@ -1,5 +1,5 @@
 
-# Seeding your Database (from Sonda's Notes)
+# Seeding your Database 
 
 ## First involves a migration
 Another way is to set an initializer for your database context that brings in database for you.

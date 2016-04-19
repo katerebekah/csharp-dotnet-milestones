@@ -13,7 +13,6 @@
 
 GetEnumerator is a kind of iterator, passes each next item, called in succession.
 
-###### Sonda's Notes
 * Repository Pattern:
    * A repository pattern separates the database logic from the business logic of your program. The program logic has really no idea what the database logic is because there is the middle man (the repository) that does the spying and implementation of the database for the program.
    * ORM is Object Relational Mapping. It is the translator mapping between the model and the specific database type so that they are able to talk to each other.
@@ -25,7 +24,7 @@ GetEnumerator is a kind of iterator, passes each next item, called in succession
    * You would put a using for a one time connection to the database to open the connection, do a thing such as retrieving data, and then close the connection. If you want a persistent connection you will need something like `db.Context.Load()` and `db.Context.Dispose()`
 
 
-* Repository pattern and the concept of caching  (Jurnell’s Talk)  
+* Repository pattern and the concept of caching   
   *  The job of a repository is to separate the data layer from the business layer.  The business layer is the portion of the application that performs a task, the data layer is simply the storing of data (or the stored data itself).
   *  The DB is only one type of data store/source.  Caching (the use of the “repo” stored in memory) allows us to have access to data upon the applications startup.  This way we don’t have to manually or programmatically access the Database each time the application starts up, we can store the data we choose within memory, essentially short circuiting the need for the application to talk to the repo (which would then talk to the context → which would talk to the model → which would talk to the Database).  For instance, we could store a “Count” variable within memory upon startup, that gets updated as the model/DB gets updated.  But upon each startup the “Count” variable is accessible from within memory, circumventing the need for the application to query the DB to get the “Count” upon each startup.
   *  This technique of caching information in the abstraction layer is a pretty common technique, and has a name within .NET (which he didn’t mention).

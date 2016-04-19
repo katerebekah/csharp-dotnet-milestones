@@ -1,10 +1,8 @@
 # Relational Databases
 
-###### Almost everything here following is from Sonda's notes
-
 #### Document Oriented vs Relational Database
   * **Relational database**
-    * Stored very similar to how data is stored in, say, excel.  
+    * Stored very similar to how data is stored in spreadsheets like excel.  
     * In tables or a grid that relate to other tables or grids.  
     * Instead of storing all the data in one place, you split it up.  For instance:    
       * Book grid with title / author / year stored in the table.  
@@ -15,24 +13,24 @@
 
   * **Practical Differences**
     * At least 95% of the time, you want a relational database.  But in the modern age, you don’t have to choose between one or the other.  Things like Postgres allow for storing document oriented stuff in a relational database.  We will be focusing on relational databases.
-    * We have currently been thinking about storing data in a document oriented way (think JSON).  We will be moving towards Tables as the overriding metaphor, as stored data will be kept in a tabular way (or at least mimic this structure).
+    * When using firebase, we used JSON.  We will be moving towards Tables as the overriding metaphor, as stored data will be kept in a tabular way (or at least mimic this structure).
 
 #### Types of Relational Databases:
   * **MySQL** → loose on rules
   * **Postgres** → strict
-  * **MS SQ**L → proprietary
+  * **MS SQL** → proprietary
   * **Sqlite** → light weight
   * **Oracle** → wrote their own spec
 
 #### Tables, Rows and Columns
-* A database with one table is not very useful.  What we end up doing in databases is having multiple tables that often relate to each other in some way.
+* A database with one table is not very useful.  What we end up doing in databases is having multiple tables that often relate to each other.
 * Each database consists of N number of tables.  
 * Each row in a table can be referred to as a “tuple”, or just a row of data if you prefer.  
 * Columns have…
 	 * name (i.e. id, title)
 	 * type (i.e. integer, varchar)
 	 * constraints (i.e. NOT NULL, UNIQUE, etc)
-	* Typically in databases we almost always have an ID column, and they are typically sequential.
+	* Typically in databases we have an ID column, and the ids are typically sequential.
 * Schema = rules for how data is structured
 * ID column is **primary key**
 * **foreign key** ID key when it is used in a different table, to reference data in original table
