@@ -1,5 +1,7 @@
 # Foundations of C\# Language and .NET Framework
 
+> **Approximate length:** This milestone is intended to last approximately 2 weeks.
+
 ![C# Foundations](foundations.png)
 
 ## What is C\#?
