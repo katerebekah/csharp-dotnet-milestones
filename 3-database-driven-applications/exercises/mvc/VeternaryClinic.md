@@ -1,4 +1,4 @@
-#Veternary Clinic
+#Veterinary Clinic
 
 ## Setup
 
@@ -9,7 +9,7 @@
 2) Make a new SQL database see https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/LSDatabases/3-database-driven-applications/exercises/database/DBS_V8_LINQ%2BENTITYFRAMEWORK.md for instructions.
 
 ## Instructions
-This exercise mocks the opperations of a veterinarian's office.  The office needs software that keeps track of their animal patients, human owners and the primary veternarian for each animal.  Make an MVC application that outputs a list of Pets with the pet's Name, Animal Type, Breed (if applicable), The name of their owner and the name of their veternarian to the browser.
+This exercise mocks the operations of a veterinarian's office.  The office needs software that keeps track of their animal patients, human owners and the primary veternarian for each animal.  Make an MVC application that outputs a list of Pets with the pet's Name, Animal Type, Breed (if applicable), The name of their owner and the name of their veternarian to the browser.
 
 ## Requirements
 
