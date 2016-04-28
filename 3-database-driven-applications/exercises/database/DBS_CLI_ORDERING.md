@@ -21,7 +21,8 @@ You will create a series of prompts that will allow the user to create various t
 2. Create a payment option
 3. Order a product
 4. Complete an order
-5. Leave Bangazon!
+5. See product popularity
+6. Leave Bangazon!
 > 
 ```
 
@@ -107,6 +108,15 @@ Your order is complete! Press any key to return to main menu.
 
 Once the order is complete, show the main menu again, where the user can start creating another order.
 
+##### See product popularity
+
+```bash
+AA Batteries ordered 10 times by 2 customers for total revenue of $99.90
+Diapers ordered 5 times by 1 customers for total revenue of $64.95
+Case of Cracking Cola ordered 4 times by 3 customers for total revenue of $27.96
+
+-> Press any key to return to main menu
+```
 
 # References
 
