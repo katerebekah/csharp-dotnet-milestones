@@ -108,7 +108,29 @@ Your order is complete! Press any key to return to main menu.
 Once the order is complete, show the main menu again, where the user can start creating another order.
 
 
+# References
 
+## Inserting into table with SQL
 
+```cs
+string command = @"
+INSERT INTO Customer
+    (FirstName, LastName, StreetAddress)
+VALUES
+    ('Sophia', 'Vargas', '801 Kilgore Street')
+";
 
+System.Data.SqlClient.SqlConnection sqlConnection1 = 
+    new System.Data.SqlClient.SqlConnection("YOUR CONNECTION STRING");
 
+System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
+cmd.CommandType = System.Data.CommandType.Text;
+cmd.CommandText = command;
+cmd.Connection = sqlConnection1;
+
+sqlConnection1.Open();
+cmd.ExecuteNonQuery();
+sqlConnection1.Close();
+```
+
+> **External reference:** [How to: Insert New Records into a Database](https://msdn.microsoft.com/en-us/library/ms233812.aspx)
