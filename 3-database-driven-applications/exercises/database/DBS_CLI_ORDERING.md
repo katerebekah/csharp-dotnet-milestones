@@ -1,4 +1,5 @@
-# Bangazon, the Command Line Ordering System
+# Bangazon! 
+## The Command Line Ordering System
 
 In this exercise, you will be allowing a user to interact with a basic product ordering database.
 
@@ -13,13 +14,14 @@ You will create a series of prompts that will allow the user to create various t
 ### Main Menu
 
 ```bash
-********************************************************
-**  Welcome to Bangazon Command Line Ordering System  **
-********************************************************
+*********************************************************
+**  Welcome to Bangazon! Command Line Ordering System  **
+*********************************************************
 1. Create an account
 2. Create a payment option
 3. Order a product
 4. Complete an order
+5. Leave Bangazon!
 > 
 ```
 
