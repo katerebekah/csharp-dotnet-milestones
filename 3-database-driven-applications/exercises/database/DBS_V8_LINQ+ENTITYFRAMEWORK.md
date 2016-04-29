@@ -17,10 +17,82 @@
 * You should now see the chinook database. 
 
 Create an app to query the Chinook Database and practice various linq queries. 
-1. Create a console app.
-2. Go to "Tools/Nuget Package Manager and add "Entity Framework".
-3. Add a folder to your project and call it "Models".
-4. Add a class and call it "ChinookContext"
-5. Add the following code"
-'''
-'''
+* Create a console app.
+* Go to "Tools/Nuget Package Manager and add "Entity Framework".
+* Add a folder to your project and call it "Models".
+* Add a class and call it Artist, it will have properties that model your database table called "Artist"
+```
+namespace BasicEntityFrameworkDataAccess.Models
+{
+   public class Artist
+    {
+        public int ArtistId { get; set; }
+        public string Name { get; set; }
+    }
+}
+
+```
+* Add a class to the models folder called "Genre"
+```
+namespace BasicEntityFrameworkDataAccess.Models
+{
+    public class Genre
+    {
+        public int GenreId { get; set; }
+        public string Name { get; set; }
+    }
+}
+```
+
+* Add a class and call it "ChinookContext"
+* Add the following code:
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Data.Entity;
+
+namespace BasicEntityFrameworkDataAccess.Models
+{
+    public class ChinookContext: DbContext
+    {
+        public DbSet<Artist> Artist { get; set; }
+        public DbSet<Genre> Genre { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Artist>()
+                .ToTable("Artist")
+                .HasKey(c => c.ArtistId);
+
+
+            modelBuilder.Entity<Genre>()
+                .ToTable("Genre")
+                .HasKey(c => c.GenreId);
+        }
+
+
+    }
+}
+```
+* In program.cs instanciate an instance of the "ChinookContext" class. 
+* Your code will look something like this:
+```
+
+        static void Main(string[] args)
+        {
+            Database.SetInitializer<ChinookContext>(null);
+
+            ChinookContext dbContext = new ChinookContext();
+            var artistSearch = "Sabbath";
+            var artists = dbContext.Artist.Where(a => a.Name.Contains(artistSearch));
+```
+###Now you need to write linq queries that answer the following questions:
+ * Bring back 100 artist and order by name
+ * Is there a genre for TV show?
+ * List the artist on a particular album you like(hint, will need to create a new model and set up in Chinook context)
+ * List all of the albums by your favorite artist.
+ * List the total bill and mailing address for the following customers with an id of (10, 38, 57)
+ * Create a class that will hold information regarding concerts you would like to attend. Create a list containing
+    your concerts of choice. Set up several properties. Query your favorite concert list.
