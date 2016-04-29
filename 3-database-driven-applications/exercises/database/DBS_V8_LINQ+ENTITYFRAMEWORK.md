@@ -19,8 +19,14 @@
 Create an app to query the Chinook Database and practice various linq queries. 
 * Create a console app.
 * Go to "Tools/Nuget Package Manager and add "Entity Framework".
+* Open your "App.config" file. You will need to add a connection string to your database. The easiest way to get the connection string is to right click on your chinook database in "Sql Server Object Explorer", you will need to add the following "connectionStrings" section to your app config file. You will need to modify the connection to match your local chinook database. 
+ ```
+ <connectionStrings>
+    <add name="ChinookContext" connectionString="Data Source=alienware-pc\sqlexpress;Initial Catalog=Chinook;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"  providerName="System.Data.SqlClient" />
+  </connectionStrings>
+ ```
 * Add a folder to your project and call it "Models".
-* Add a class and call it Artist, it will have properties that model your database table called "Artist"
+* Add a class and call it "Artist", it will have properties that model your database table called "Artist"
 ```
 namespace BasicEntityFrameworkDataAccess.Models
 {
@@ -89,7 +95,7 @@ namespace BasicEntityFrameworkDataAccess.Models
             var artists = dbContext.Artist.Where(a => a.Name.Contains(artistSearch));
 ```
 ###Now you need to write linq queries that answer the following questions:
- * Bring back 100 artist and order by name
+ * Bring back 100 artists and order by name
  * Is there a genre for TV show?
  * List the artist on a particular album you like(hint, will need to create a new model and set up in Chinook context)
  * List all of the albums by your favorite artist.
