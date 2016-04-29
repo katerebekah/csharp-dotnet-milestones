@@ -20,7 +20,7 @@ Create an app to query the Chinook Database and practice various linq queries.
 * Create a console app.
 * Go to "Tools/Nuget Package Manager and add "Entity Framework".
 * Add a folder to your project and call it "Models".
-* Add a class and call it Artist, it will have properties that model your database table called "Artist"
+* Add a class and call it "Artist", it will have properties that model your database table called "Artist"
 ```
 namespace BasicEntityFrameworkDataAccess.Models
 {
@@ -89,7 +89,7 @@ namespace BasicEntityFrameworkDataAccess.Models
             var artists = dbContext.Artist.Where(a => a.Name.Contains(artistSearch));
 ```
 ###Now you need to write linq queries that answer the following questions:
- * Bring back 100 artist and order by name
+ * Bring back 100 artists and order by name
  * Is there a genre for TV show?
  * List the artist on a particular album you like(hint, will need to create a new model and set up in Chinook context)
  * List all of the albums by your favorite artist.
