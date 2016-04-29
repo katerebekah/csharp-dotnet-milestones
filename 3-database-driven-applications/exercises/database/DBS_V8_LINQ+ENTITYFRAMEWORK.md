@@ -1,7 +1,7 @@
 # LINQ / Entity Framework Exercises
 
 ### Coding Exercise:
-## installing a local version of the Chinook Database
+## Installing a local version of the Chinook Database
 * We will be coding against the Chinook database.
 * A sql script for installing can be downloaded from here. https://chinookdatabase.codeplex.com/
 * Once you have downloaded the zip file. You will see several scripts.
