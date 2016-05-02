@@ -1,8 +1,6 @@
+# Learning SQL Through Doing
 
-## Learning SQL Through Doing
-
-
-### Instructions
+## Instructions
 
 1. Ensure you have the [Chinook Database](http://chinookdatabase.codeplex.com/) and [SQLite Manager Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/sqlite-manager/) installed.
 1. Create a github repo for your answers. This repo will  only contain a README file in which you will write a short description of the exercise and where you can keep track of your answers.

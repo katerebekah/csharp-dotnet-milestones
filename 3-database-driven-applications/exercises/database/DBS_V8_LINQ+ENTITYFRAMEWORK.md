@@ -1,8 +1,7 @@
 # LINQ / Entity Framework Exercises
 
-### Coding Exercise:
+## Coding Exercise
 
-N.B. This exercise needs a good review and some help before it is ready for the students!
 Completion of this exercise will be the first step for Migrations exercise later.
 
 The main idea is to get a SQL Express database working, using Entity Framework and LINQ as part of a command-line [C#] app in Visual Studio.  I have not been able to do this, nor find anyone else who knows how (NSS classes have always waited until the MVC stage to work w/ EF & LINQ).  My efforts to get this to happen, with lots of trial and error include:
