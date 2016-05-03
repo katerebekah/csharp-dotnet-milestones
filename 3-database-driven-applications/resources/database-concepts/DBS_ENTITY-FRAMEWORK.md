@@ -1,11 +1,17 @@
 # Entity Framework
 
-* https://msdn.microsoft.com/en-us/data/ee712907
-* http://www.entityframeworktutorial.net/
+* http://www.tutorialspoint.com/entity_framework/entity_framework_overview.htm
+* http://tektutorialshub.com/introduction-to-entity-framework/
+* http://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it
 
-###### N.B. Everything here is from Sonda's Notes, but not in the same order that she had them.  This file probably needs major review / checking / correction.
-
-### Making your Project Entity-Friendly:
+### What is an ORM (Object Relational Mapper)
+* ORMS solve the problem of mismatch between relational data and objects found in code.
+* There are many ORMS but Entity Framework is frequently used in .NET applications
+* ORMS connect to databases and manage communication between the database and your C# code that will be querying, updating, creating, deleting records int he database.
+* ORMs save developers from having to embed sql in their programs as strings
+* ORMS map to tables allowing developers to easily create objects that will have the matching properties making inserting new data easier since there are classes often called models that directly reflect the database table they represent. 
+![Image of Yaktocat](http://www.entityframeworktutorial.net/images/EF5/databasefirst.png)
+### What is Entity Framework?:
 * Go the project and right-click to Add > Manage Nuget > Search and install EntityFramework.
 * Make a class called ObjectContext.cs within the ProjectName namespace and use the interface DbContext with a semicolon. Make another class called Event.cs
 * Add the using System.Data.Entity at the top and Using ProjectName
@@ -13,6 +19,7 @@
 * Within the Object.cs add a field ObjectID which is an observable collection that represents the actually data(??)
 * Right-Click Data Connection from Server Explorer. Now add a Connection > Server Name .\SQLEXPRESS > Under "Connect to database" add ProjectName.ObjectContext. You can test it and then add it. It should populate in Server Explorer with tables, views, etc.
 * Technically, the connection belongs in the Object class, but we’ll move it to the mainwindow.cs because it’s where the program begins. So we’ll move the observable collection line here. So when the window starts up, it makes a new instance of the Objects collection.
+### Why use and ORM (Object Relation Mapper) like Entity Framework:
 
 ### Connecting all the things
 ##### Connections
