@@ -26,9 +26,10 @@
 * Can use objects to represent data which makes querying and manipulating data much easier. 
 * Using objects enables developers to debug in a way that embedded sql or stored procedures cannot.
 * Promotes a cleaner code base by allowing developers to develop against common objects that represent relational data.
+* Not as much looping though code to get results or resorting to creating various classes and collections to work with and display data. 
 
 ### How It Works
-* An application that uses Entity Framework will have what is called "DBContext" DBContext is used to not only to make a connection to to a database but also directly maps tables in the database to objects often called "domain objects" or "models". 
+* An application that uses Entity Framework will have what is called "DBContext", DBContext is used to not only to make a connection to to a database but also directly maps tables in the database to objects often called "domain objects" or "models". 
 * The code sample below shows a typical example of a DBContext. You can see that the model called "Employee" is being directly associated with a table in the database called "Employee".
 ```
 namespace MyDatabase.Models
