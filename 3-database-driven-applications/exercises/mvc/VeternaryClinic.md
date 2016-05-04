@@ -14,7 +14,7 @@ This exercise mocks the operations of a Veterinarian's office.  The office needs
 ## Requirements
 
 1. Each pet should include their name (i.e. Fido), species (cat, dog, etc.), breed (if applicable), human owner and Veterinarian.
-2. Poplulate the tables with example data, give each veternatian several patients and at least 3 humans more than one pet.
+2. Populate the tables with example data, give each veternatian several patients and at least 3 humans more than one pet.
 3. Make at least 3 tables.
 4. Use LINQ to join the 3 tables to retrieve the data for the list.
 5. Output a list to the browser of pets that at minimum includes their name, owner's name and veternarian's name.  
