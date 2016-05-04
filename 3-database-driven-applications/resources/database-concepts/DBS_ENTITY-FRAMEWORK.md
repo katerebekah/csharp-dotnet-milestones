@@ -69,7 +69,7 @@ namespace MyDatabase.Models
     }
 }
 ```
-* This is an example of the models being used to join data from the relational database using LINQ. 
+* This is an example of the models being used to join data from the relational database using a LINQ join. Note that the DBContext object is being used to connect to two tables in the database, in this case a table called "Employee" and another table called "Department".
 ```
 public ActionResult Index()
         {
@@ -91,4 +91,4 @@ public ActionResult Index()
             };
 ```
 
-```
+
