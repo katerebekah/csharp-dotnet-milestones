@@ -26,9 +26,8 @@
 * Promotes a cleaner code base by allowing developers to develop against common objects that represent relational data.
 ### How It Works
 * An application that used Entity Framework will used what is called "DBContext" DBContext is used to not only to make a connection to to a database but also directly maps tables in the database to objects often called "domain objects" or "models". 
-* The code sample below shows a typical example of a DBContext. You can see that the model called "Employee" is being directly assocated with a table in the database called "Employee".
+* The code sample below shows a typical example of a DBContext. You can see that the model called "Employee" is being directly associated with a table in the database called "Employee".
 ```
-
 namespace MyDatabase.Models
 {
     public class MyStoreContext: DbContext
@@ -48,3 +47,48 @@ namespace MyDatabase.Models
         }
     }
 }
+```
+* Notice that this instance of the DBContext is named MyStore. You will see that the actual connection string associated with this database connection. Usually the database connection string is stored in the Web.Config for a web project or the App.Config file for other types of projects. 
+```
+ <connectionStrings>
+    <add name="MyStoreContext" connectionString="Data Source=Alienware-PC\sqlexpress;Initial Catalog=MyStore;Integrated Security=True"  providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
+* This code shows the model that represents the "Employee" table in the database.
+```
+namespace MyDatabase.Models
+{
+    public class Employee
+    {
+        public int EmployeeId { get; set; }
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public int DepartmentId { get; set; }
+        public string City { get; set; }
+        public string Description { get; set; }
+    }
+}
+```
+* This is an example of the models being used to join data from the relational database using LINQ. 
+```
+public ActionResult Index()
+        {
+            MyStoreContext _myStoreContext = new MyStoreContext();
+            var employeeDetails = (from emp in _myStoreContext.Employee
+                                   join dept in _myStoreContext.Department
+                                   on emp.DepartmentId equals dept.DepartmentId
+                                   orderby dept.Name
+                                   select new EmployeeDetailsViewModel
+                                   {
+                                       Name = emp.Name,
+                                       Description = emp.Description,
+                                       DepartmentName = dept.Name
+                                   }).ToList();
+
+            EmployeeDepartmentDetailsViewModel employeeDepartmentDetails= new EmployeeDepartmentDetailsViewModel
+            {
+                Employees=employeeDetails
+            };
+```
+
+```
