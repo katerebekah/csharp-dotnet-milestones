@@ -6,9 +6,10 @@
 
 ### What is an ORM (Object Relational Mapper)
 * ORMS solve the problem of mismatch between relational data and objects found in code.
-* There are many ORMS but Entity Framework is frequently used in .NET applications
+* There are many ORMS but Entity Framework is frequently used in .NET applications.
 * ORMS connect to databases and manage communication between the database and your C# code that will be querying, updating, creating, deleting records int he database.
-* ORMs save developers from having to embed sql in their programs as strings
+* ORMs save developers from having to embed sql in their programs as strings or called stored procedures.
+* Embedded sql strings and stored procedures are difficult to debug but using Entity Framework or other ORMS gives developers objects they can query and debug. Having access to intellisence while developing is an additional feature. 
 * ORMS map to tables allowing developers to easily create objects that will have the matching properties making inserting new data easier since there are classes often called models that directly reflect the database table they represent. 
 
 *![Entity Framework](http://www.entityframeworktutorial.net/Images/ORM.png)
@@ -20,12 +21,14 @@
 
 ### Why use and ORM (Object Relation Mapper) like Entity Framework:
 * Promotes a consistent way for a team to access data
+* Takes away plumbing related to opening and closing database connections. You are using a single object to connect to the database rather that having connections spread throughout your code base. 
 * Can use LINQ vs embedded sql or calling stored procedures
 * Can use objects to represent data which makes querying and manipulating data much easier. 
 * Using objects enables developers to debug in a way that embedded sql or stored procedures cannot.
 * Promotes a cleaner code base by allowing developers to develop against common objects that represent relational data.
+
 ### How It Works
-* An application that used Entity Framework will used what is called "DBContext" DBContext is used to not only to make a connection to to a database but also directly maps tables in the database to objects often called "domain objects" or "models". 
+* An application that uses Entity Framework will have what is called "DBContext" DBContext is used to not only to make a connection to to a database but also directly maps tables in the database to objects often called "domain objects" or "models". 
 * The code sample below shows a typical example of a DBContext. You can see that the model called "Employee" is being directly associated with a table in the database called "Employee".
 ```
 namespace MyDatabase.Models
@@ -48,7 +51,7 @@ namespace MyDatabase.Models
     }
 }
 ```
-* Notice that this instance of the DBContext is named MyStore. You will see that the actual connection string associated with this database connection. Usually the database connection string is stored in the Web.Config for a web project or the App.Config file for other types of projects. 
+* Notice that this instance of the DBContext is named "MyStoreContext". Below you will see the actual connection string associated with this database connection. Usually the database connection string is stored in the Web.Config for a web project or the App.Config file for other types of projects. 
 ```
  <connectionStrings>
     <add name="MyStoreContext" connectionString="Data Source=Alienware-PC\sqlexpress;Initial Catalog=MyStore;Integrated Security=True"  providerName="System.Data.SqlClient" />
@@ -85,10 +88,6 @@ public ActionResult Index()
                                        DepartmentName = dept.Name
                                    }).ToList();
 
-            EmployeeDepartmentDetailsViewModel employeeDepartmentDetails= new EmployeeDepartmentDetailsViewModel
-            {
-                Employees=employeeDetails
-            };
 ```
 
 
