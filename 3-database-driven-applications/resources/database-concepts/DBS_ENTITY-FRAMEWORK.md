@@ -3,6 +3,7 @@
 * http://www.tutorialspoint.com/entity_framework/entity_framework_overview.htm
 * http://tektutorialshub.com/introduction-to-entity-framework/
 * http://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it
+* https://msdn.microsoft.com/en-us/data/jj729737.aspx
 
 ### What is an ORM (Object Relational Mapper)
 * ORMS solve the problem of mismatch between relational data and objects found in code.
