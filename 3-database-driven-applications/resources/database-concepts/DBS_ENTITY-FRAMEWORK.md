@@ -1,52 +1,94 @@
 # Entity Framework
 
-* https://msdn.microsoft.com/en-us/data/ee712907
-* http://www.entityframeworktutorial.net/
+* http://www.tutorialspoint.com/entity_framework/entity_framework_overview.htm
+* http://tektutorialshub.com/introduction-to-entity-framework/
+* http://stackoverflow.com/questions/1279613/what-is-an-orm-and-where-can-i-learn-more-about-it
 
-###### N.B. Everything here is from Sonda's Notes, but not in the same order that she had them.  This file probably needs major review / checking / correction.
+### What is an ORM (Object Relational Mapper)
+* ORMS solve the problem of mismatch between relational data and objects found in code.
+* There are many ORMS but Entity Framework is frequently used in .NET applications.
+* ORMS connect to databases and manage communication between the database and your C# code that will be querying, updating, creating, deleting records int he database.
+* ORMs save developers from having to embed sql in their programs as strings or called stored procedures.
+* Embedded sql strings and stored procedures are difficult to debug but using Entity Framework or other ORMS gives developers objects they can query and debug. Having access to intellisence while developing is an additional feature. 
+* ORMS map to tables allowing developers to easily create objects that will have the matching properties making inserting new data easier since there are classes often called models that directly reflect the database table they represent. 
 
-### Making your Project Entity-Friendly:
-* Go the project and right-click to Add > Manage Nuget > Search and install EntityFramework.
-* Make a class called ObjectContext.cs within the ProjectName namespace and use the interface DbContext with a semicolon. Make another class called Event.cs
-* Add the using System.Data.Entity at the top and Using ProjectName
-* Within ObjectContext.cs add the property DBSet and make it public, that allows you to pull a set of entities from the database. In SQL, there are the same as query sets.
-* Within the Object.cs add a field ObjectID which is an observable collection that represents the actually data(??)
-* Right-Click Data Connection from Server Explorer. Now add a Connection > Server Name .\SQLEXPRESS > Under "Connect to database" add ProjectName.ObjectContext. You can test it and then add it. It should populate in Server Explorer with tables, views, etc.
-* Technically, the connection belongs in the Object class, but we’ll move it to the mainwindow.cs because it’s where the program begins. So we’ll move the observable collection line here. So when the window starts up, it makes a new instance of the Objects collection.
+*![Entity Framework](http://www.entityframeworktutorial.net/Images/ORM.png)
 
-### Connecting all the things
-##### Connections
-* There are already connections that are in place between your program and your database. There is already a pool of connections in place where depending upon the operation, any call to pool data, and will use the connection to talk to the database.
-* In the code, it will specify preregistered pathways that can be used and then you can use those connections over and over again, so the wait time is not as long for the O\RM
+### What is Entity Framework?:
+* Popular ORM used in .NET applications
+* There are many techniques for using it so looking for specific examples can be tricky
+* It is typically added to your .NET app via Nuget Package Manager. 
 
-###### So how does this look?
-* In our program, manage nuget package manager > Search EntityFramework > Install EntityFramework.
-* Accept Terms. Now it should be added to the references.
-* Add reference has a using in your program.
-* Then add another class with DbContext as an addition using a semicolon (ex: `public class ShapesContext : DbContext`).
-  * You can use DbSet to link up the database with the class.
-* Then within your main, you must make a new instance of your database (new ShapeContext ()).
-* Make a new rectangle. Use .Add to prep what you want into the databases and then .SaveChanges to actually add them to database.
+### Why use and ORM (Object Relation Mapper) like Entity Framework:
+* Promotes a consistent way for a team to access data
+* Takes away plumbing related to opening and closing database connections. You are using a single object to connect to the database rather that having connections spread throughout your code base. 
+* Can use LINQ vs embedded sql or calling stored procedures
+* Can use objects to represent data which makes querying and manipulating data much easier. 
+* Using objects enables developers to debug in a way that embedded sql or stored procedures cannot.
+* Promotes a cleaner code base by allowing developers to develop against common objects that represent relational data.
+* Not as much looping though code to get results or resorting to creating various classes and collections to work with and display data. 
 
-##### Closing Connections
-* When you close a program, you must close the connection as well.
-  * Otherwise, they stay persistently open and you will have a zombie database that will be kept alive even though you are not using the database for anything. The connection will stay open eating up space and memory.
-* When you’re done, close your database connection with something like db.Close().
-* But programmers are awfully forgetful people, so they made something called a using to close the connection for you. You wrap all your database connection code within a using(). When that reaches the end of the code block, then it closes itself.
+### How It Works
+* An application that uses Entity Framework will have what is called "DBContext", DBContext is used to not only to make a connection to to a database but also directly maps tables in the database to objects often called "domain objects" or "models". 
+* The code sample below shows a typical example of a DBContext. You can see that the model called "Employee" is being directly associated with a table in the database called "Employee".
+```
+namespace MyDatabase.Models
+{
+    public class MyStoreContext: DbContext
+    {
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Department> Department { get; set; }
 
-##### How do I write a unit test to see whether the connection to database is working?
-* Make a TestPersistance.cs in your project.
-* Go back and add (or prep) a line to the database using db.Add in the MainWindow.cs.
-* This is a Code First technique where we first write the code to make .NET generate the database for us.
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>()
+                .ToTable("Employee")
+                .HasKey(e => e.EmployeeId);
 
-### Misc Other Notes?
-* In reality, the mainwindow should not care about data events. There should be a class for business logic (our main window) and interacting with the queries of the database (DAL such as LINQ or queries or accessing the data). So we should have a level of abstraction that decouples the two, so we have a repository in the middle.
-* Lazy Evaluation - allow the platform underneath you to control data access for you. For example, the LINQ query is not evaluated until the foreach gets evaluated. So you can make as many queries as you want and then evaluate them.
-* We make a repository to handle the LINQ logic, and one popular pattern is to generalize it such that your tests are actually querying a list and the list happens to have plugins to access your database. In this way, you make an interface such that you can use a different database type if you wish later, and the rest of the program does not have to worry about what that is because the interface ensures that the data and its methods get handled the same way no matter what data type it is throughout your whole program.
-* So you can create an interface such as IObjectRepository.cs within a new folder called Repository. In this interface, you must add the names for the methods that you want used for any class that is using this interface such as Add, Delete, etc.
-* Next we can create an ObjectRepository.cs class and use interface as semicolon. If you click on option > Implement Interface, then it will repopulate the page with all those empty methods that the interface requires.
-* If you want something back that you can do stuff with, you will use IQueryable to query the data
-* A **predicate** is a statement that filters your queryable. It’s a collection that you can run a query through.
-* Now with an interface and ObjectRepository.cs class in place, you can make a ObjectRepositoryTest.cs to test these methods that are in your ObjectRepository.cs class. The first things you can do in the class is implement a constructor to open your database
-* **##CSharp** is the IRC Channel where all the C sharp nerds hang out.
-* `DataContext db = new DataContext(@"c:\Northwnd.mdf");`
+            modelBuilder.Entity<Department>()
+              .ToTable("Department")
+              .HasKey(d => d.DepartmentId);
+        }
+    }
+}
+```
+* Notice that this instance of the DBContext is named "MyStoreContext". Below you will see the actual connection string associated with this database connection. Usually the database connection string is stored in the Web.Config for a web project or the App.Config file for other types of projects. 
+```
+ <connectionStrings>
+    <add name="MyStoreContext" connectionString="Data Source=Alienware-PC\sqlexpress;Initial Catalog=MyStore;Integrated Security=True"  providerName="System.Data.SqlClient" />
+  </connectionStrings>
+```
+* This code shows the model that represents the "Employee" table in the database.
+```
+namespace MyDatabase.Models
+{
+    public class Employee
+    {
+        public int EmployeeId { get; set; }
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public int DepartmentId { get; set; }
+        public string City { get; set; }
+        public string Description { get; set; }
+    }
+}
+```
+* This is an example of the models being used to join data from the relational database using a LINQ join. Note that the DBContext object is being used to connect to two tables in the database, in this case a table called "Employee" and another table called "Department".
+```
+public ActionResult Index()
+        {
+            MyStoreContext _myStoreContext = new MyStoreContext();
+            var employeeDetails = (from emp in _myStoreContext.Employee
+                                   join dept in _myStoreContext.Department
+                                   on emp.DepartmentId equals dept.DepartmentId
+                                   orderby dept.Name
+                                   select new EmployeeDetailsViewModel
+                                   {
+                                       Name = emp.Name,
+                                       Description = emp.Description,
+                                       DepartmentName = dept.Name
+                                   }).ToList();
+
+```
+
+
