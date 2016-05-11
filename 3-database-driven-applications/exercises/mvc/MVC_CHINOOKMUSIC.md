@@ -1,7 +1,7 @@
 
 ### Chinook Music ASP.NET MVC SITE
 * Create a DBContext and Models needed for your web site
-* Use View Models to specify customized strongly typed model to be used by your pages. You don't always need a view model but often you do.
+* Use View Models to specify customized strongly typed models to be used by your pages. You don't always need a view model but usually do.
 
 
 ##Create pages that display the following data
