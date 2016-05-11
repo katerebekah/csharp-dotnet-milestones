@@ -11,7 +11,7 @@
 * List all of the albums by your favorite artist.
 * List the total bill and mailing address for the following customers with an id of (10, 38, 57)
 * Create a class that will hold information regarding concerts you would like to attend. Create a list containing your concerts of choice. Set up several properties. Query your favorite concert list.
-* 
+ 
 ##Bonus Activities
 * Use a boostrap grid for your data
 * Change the color of text on the screen based on a condition, for example all names of country artists are displayed as blue text. 
