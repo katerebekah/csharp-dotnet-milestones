@@ -20,7 +20,7 @@ You will create a series of prompts that will allow the user to create various t
 1. Create a customer account
 2. Choose active customer
 3. Create a payment option
-4. Order a product
+4. Add product to shopping cart
 5. Complete an order
 6. See product popularity
 7. Leave Bangazon!
@@ -69,7 +69,7 @@ Enter account number
 >
 ```
 
-### Order a Product
+### Add Product to Shopping Cart
 
 > **Note:** These are examples. Add your own products to the *Product* table.
 
@@ -81,7 +81,7 @@ To make it easier to add multiple products, when the user selects a product to o
 3. Bicycle
 4. AA Batteries
 ...
-9. Back to main menu
+9. Done adding products 
 ```
 
 ### Complete an Order
