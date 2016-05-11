@@ -11,10 +11,10 @@
 * List all of the albums by your favorite artist.
 * List the total bill and mailing address for the following customers with an id of (10, 38, 57)
 * Create an action that outputs a view that displays your your concert wishlist. You will need to C
-* create a class that will hold information regarding concerts you would like to attend. Create a list containing your concerts of choice. Set up several properties. Query your favorite concert list. You may want to create a table in your database or create the data on the fly. 
+* Create a class that will hold information regarding concerts you would like to attend. Create a list containing your concerts of choice. Set up several properties. Query your favorite concert list. You may want to create a table in your database or create the data on the fly. 
  
 ##Bonus Activities
 * Use a boostrap grid for your data
 * Change the color of text on the screen based on a condition, for example all names of country artists are displayed as blue text. 
-* Get data from a free public music api like https://musicmachinery.com/music-apis/
+* Get data from a free public music api like https://musicmachinery.com/music-apis/. Display the data in the browser.
 * Create a menu for your site, can use bootstrap or other.
