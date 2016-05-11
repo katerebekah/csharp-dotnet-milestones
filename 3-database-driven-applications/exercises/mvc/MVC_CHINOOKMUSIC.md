@@ -10,7 +10,8 @@
 * List the artist on a particular album you like(hint, will need to create a new model and set up in Chinook context)
 * List all of the albums by your favorite artist.
 * List the total bill and mailing address for the following customers with an id of (10, 38, 57)
-* Create a class that will hold information regarding concerts you would like to attend. Create a list containing your concerts of choice. Set up several properties. Query your favorite concert list.
+* Create an action that outputs a view that displays your your concert wishlist. You will need to C
+* create a class that will hold information regarding concerts you would like to attend. Create a list containing your concerts of choice. Set up several properties. Query your favorite concert list. You may want to create a table in your database or create the data on the fly. 
  
 ##Bonus Activities
 * Use a boostrap grid for your data
