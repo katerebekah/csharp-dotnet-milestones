@@ -77,8 +77,8 @@ CREATE TABLE [dbo].[Document] (
 { 
 
  ```
- *Add a closing bracket at the end of the page.
- *Add the following to give users the ability to upload files
+ * Add a closing bracket at the end of the page.
+ * Add the following to give users the ability to upload files
  ```
    <label for="file">File Upload:</label><br/>
     @Html.Label("File Name:   ")@Html.TextBoxFor(model=>model.Title)
