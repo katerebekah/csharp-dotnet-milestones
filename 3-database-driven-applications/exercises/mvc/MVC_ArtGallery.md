@@ -4,15 +4,19 @@ As owners of several art galleries, we need a web page to advertise our availabl
 User Stories:
 
 As a customer I will:
+
 1. be able to view all the art currently for sale (with images)
 2. be able to select a piece of art and view the details (Image, price dimensions, number in inventory and location) for that piece
 3. view only the art for an artist, medium or price range of my choosing
 4. Find the details of upcomming events including gallory openings 
+
 Bonus:
+
 1. View the art I've purchased, the price I paid for each and the total I have spent.
 2. Mark pieces that I would like to purchase and have them save for me to check out later (equivalent to "watch" on ebay)
 
 As a gallery owner I will:
+
 1. be able to view my inventory, the current asking price and the price the gallery paid for the art
 2. be able to view all sold artwork, the price paid and the profit made
 2. be able to view the total sales (for the week/month/year)
