@@ -28,7 +28,7 @@
 
 ![Results of calling the GetAll Action](https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/WebApiCrud_5_31/4-api-era/resources/Other%20Resources/JsonResultsInPostman.png)
 
-###Now you need create actions that return the following information:
+###Now you need create controller methods that return the following information:
  * Bring back 100 artists and order by name (hint new model class, new entry to the entityset in the DBContext class)
  * Pass in a search phase to the Artist table, query the artist table by the search phrase, output the results. 
  * List all the artist on a particular album you like(hint, will need to pass an album id in the calling url to the action)
