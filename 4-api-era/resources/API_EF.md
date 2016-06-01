@@ -2,6 +2,7 @@
 
 * As of the writing of this document MVC6 is in Release Candidate 2. A starter template was created that dealt with several configuration issues and provided a starting point for data access using Entity Framework 7.
 * The Web Api Template can be found here: [Api Template](https://github.com/lynnsamuelson/ASP.NET_WebApi_Template) 
+* Entity Framework 7 is included in MVC 6 apps so it is not necessary to install a nuget package to get the Entity Framework associated assemblies. 
 
 ##What is MVC6 Web API##
 * ASP.NET MVC and ASP.NET Web Api have become one (MVC + Web API = MVC 6)and now uses the same libraries
