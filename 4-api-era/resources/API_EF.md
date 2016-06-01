@@ -29,7 +29,7 @@
 ![DB Context Example](https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/WebApiCrud_5_31/4-api-era/resources/Other%20Resources/dbcontextMVC6.png)
 
 * In asp.net mvc 5 the DBContext name had to match the name in the web config. Now the name of the connection is mapped to the DBContext in the "ConfigureServices" method of the "Startup.cs" file. 
-* ![Configure Services ](https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/WebApiCrud_5_31/4-api-era/resources/Other%20Resources/configureServices.png)
+![Configure Services ](https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/WebApiCrud_5_31/4-api-era/resources/Other%20Resources/configureServices.png)
 
 * Models that represent your tables look and behave the same way they did in asp.net mvc web applications.
 ![Model Class](https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/WebApiCrud_5_31/4-api-era/resources/Other%20Resources/AlbumModel.png)
@@ -38,7 +38,7 @@
 * In MVC 6 the controller for web is not a seperate api controller, it can just implement Controller.
 * In this example the db context is being injected into the constructor.
 * The "GetAll" action returns a json representation of all of the albums in the database.
-* 
+
 ![Simple Controller Class](https://github.com/nashville-software-school/csharp-dotnet-milestones/blob/WebApiCrud_5_31/4-api-era/resources/Other%20Resources/WebApiController.png)
 
 ### Route Configuration ###
