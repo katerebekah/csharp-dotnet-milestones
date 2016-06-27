@@ -5,7 +5,7 @@ Koans are a series of puzzels designed to teach the contructs of the language.  
 
 
 ###Getting Started
-* Fork the github project from: https://github.com/lynnsamuelson/CSharpDotNetKoans
+* Fork the github project from:https://github.com/nashville-software-school/CSharpDotNetKoans
 * Use git bash shell to clone the repo into the directory of your choosing (think "workspaces")
 * Open the project in Visual Studio by opening the directory in file explorer and double-clicking on DotNetKoans.Sln (this is the project's solution file)
 * Go to `Build > Build Solutions`. It should run without errors.
