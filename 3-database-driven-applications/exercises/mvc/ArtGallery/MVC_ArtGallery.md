@@ -33,6 +33,6 @@ As product owners, we have provided:
 3. Spreadsheet of the data the gallery owner currently has that needs to be included.
 
 Notes: 
- 1. Working on a team and having a local database can be challenging.  Be sure to have a stategy for this probelm early in the project.  One strategy is to script an sql file that will create the local database and add that data.  Remember to make sure that the tables are created in an order that does not add a foreign key before the table being referenced is created.  The same goes for the data.  
+ 1. Working on a team and having a local database can be challenging.  Be sure to have a stategy for this probelm early in the project.  One strategy is to script an sql file that will create the local database and add that data.  Remember to make sure that the tables are created in an order that does not add a foreign key before the table being referenced is created.  The same goes for the data.  Another method is to use code first in which everyone pulls down the Models and does migragtions to creat a local dababase with the seed data.
 
  2. Since each team member will have their own local database for the project, remember to either add the file where the connection string is to the git ignore or you will need to replace the connection string each time you merge and pull down.
