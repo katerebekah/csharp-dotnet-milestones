@@ -73,9 +73,8 @@ class Automobile {
 Automobile generic_auto = new Automobile();
 Console.WriteLine("Automobiles go {0}", generic_auto.Accelerate());
 
-// However, the following code does not compile
+// However, the following line of code does not compile
 generic_auto.InjectFuel();
-
 ```
 
 
@@ -84,7 +83,7 @@ generic_auto.InjectFuel();
 class Car : Automobile {
 
     public string CallAPrivateParentMethod {
-        this.InjectFuel();
+        this.InjectFuel(); // Can not call InjectFuel b/c it's listed as private in the parent class, Automobile
     }
 }
 
@@ -92,7 +91,7 @@ class Car : Automobile {
 
 Car stella = new Car();
 
-// Again, the following code does not compile
+// Again, the following line of code does not compile
 stella.InjectFuel();
 ```
 
