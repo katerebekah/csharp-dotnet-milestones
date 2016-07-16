@@ -12,81 +12,88 @@ In C#, there are five accessibility levels that can be applied to Classes, Metho
 
 Classes and Methods that have tagged with the `public` keyword are accessibile without restriction. `public` methods are usable from derived classes (i.e. children) and from outside the inheritance heirarchy (i.e. family).
 
-In some `Animal.cs`:
+In some `Automobile.cs`:
 
 ```c#
 // Base class
-class Animal {
+class Automobile {
 
-    public string walk() {
-        return "walk-walk-walking";
+    public string Accelerate() {
+        return "zoom!";
     }
+
 }
 
 // Derived class
-class Lizard : Animal {
+class Car : Automobile {
 }
 ```
 
 In some `Program.cs`:
 
 ```c#
-Animal generic_animal = new Animal();
-Lizard larry = new Lizard();
+Automobile generic_auto = new Automobile();
+Car stella = new Car();
 
-Console.WriteLine("A lizard is {0}", larry.walk());
+Console.WriteLine("Cars go {0}", stella.Accelerate());
 ```
 
 ## Private
 
-Classes and Methods that have tagged with the `private` keyword are only accessible from within the containing class.
+Classes and Methods that have tagged with the `private` keyword are only accessible from within the containing class. This means that private method can not be called from anywhere outside the class, including derived classes (children).
+
+Private methods are intended to be internal functionality. Consider the classes below:
 
 
 ```c#
 // Base class
-class Animal {
-    // Simple properties
-    public double speed { get; set; }
-    public string species { get; set; }
-    public int legs { get; set; }
+class Automobile {
 
+    public string Accelerate() {
+        this.InjectFuel();
+        return "zoom";
+    }
 
-    // Public method that can be redefined by derived classes
-    public virtual void walk () {
-        Console.WriteLine("Animal class walk method");
-        speed = speed + (0.1 * legs);
+    public string Break() {
+        this.SqueezeBreakPads();
+        return "skuuuuuur";
+    }
+
+    private string InjectFuel() {
+        return "fueling";
+    }
+
+    private string SqueezeBreakPads() {
+        return "exhale";
     }
 }
 
-// Derived class
-class Lizard : Animal {
-    // Adding additional properties to what is inherited from Animal
-    public string scaleColor { get; set; }
-    public bool camouflage { get; set; }
+// Usage Example in a Program.cs file somewhere
 
-    // Redefining the base class implementation
-    public override void walk () {
-        Console.WriteLine("Lizard class walk method");
-        speed = speed + (0.2 * legs);
+Automobile generic_auto = new Automobile();
+Console.WriteLine("Automobiles go {0}", generic_auto.Accelerate());
+
+// However, the following code does not compile
+generic_auto.InjectFuel();
+
+```
+
+
+```c#
+// Given a Derived class, the follow code does not compile
+class Car : Automobile {
+
+    public string CallAPrivateParentMethod {
+        this.InjectFuel();
     }
 }
 
-// Create a Lizard
-Lizard larry = new Lizard();
-larry.legs = 4;
-larry.scaleColor = "Brown";
-larry.camouflage = false;
-larry.walk();
+// Usage Example in a Program.cs file somewhere
 
-Console.WriteLine("A {0} lizard moving at {1} m/s", larry.scaleColor, larry.speed);
+Car stella = new Car();
 
-// Create an Animal
-Animal andy = new Animal();
-andy.legs = 4;
-andy.walk();
-
-Console.WriteLine("An animal moving at {0} m/s", andy.speed);
-
+// Again, the following code does not compile
+stella.InjectFuel();
 ```
 
 ## Protected
@@ -100,7 +107,7 @@ However, we hide the implementation of setting the speed of the animal since we 
 
 As your code becomes more complex, Abstraction is the process that you, the developer, will go through to provide the most general, and hopefully simplest, way possible. This is done via multiple refactors of your code as complexity slowly works its way in.
 
-With our current code, the `Animal` class is an abstraction of more specific animals that we create later, such as the Lizard.
+With our current code, the `Automobile` class is an abstraction of more specific animals that we create later, such as the Car.
 
 
 ## Protected Internal
