@@ -40,7 +40,7 @@ Console.WriteLine("Cars go {0}", stella.Accelerate());
 
 ## Private
 
-Classes and Methods that have tagged with the `private` keyword are only accessible from within the containing class. This means that private method can not be called from anywhere outside the class, including derived classes (children).
+Classes and Methods that have tagged with the `private` keyword are only accessible from within the class where it's defined. This means that private method can not be called from anywhere outside the class, including derived classes (children).
 
 Private methods are intended to be internal functionality. Consider the classes below:
 
