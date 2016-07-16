@@ -10,7 +10,7 @@ In C#, there are five accessibility levels that can be applied to Classes, Metho
 
 ## Public
 
-Classes and Methods that have tagged with the `public` keyword are accessibile without restriction.
+Classes and Methods that have tagged with the `public` keyword are accessibile without restriction. `public` methods are usable from derived classes (i.e. children) and from outside the inheritance heirarchy (i.e. family).
 
 In some `Animal.cs`:
 
@@ -18,28 +18,23 @@ In some `Animal.cs`:
 // Base class
 class Animal {
 
-    // Public method
-    public void walk () {
+    public string walk() {
+        return "walk-walk-walking";
     }
 }
 
 // Derived class
 class Lizard : Animal {
-    // Adding additional properties to what is inherited from Animal
-    public string scaleColor { get; set; }
-    public bool camouflage { get; set; }
 }
 ```
 
 In some `Program.cs`:
 
 ```c#
-Animal larry = new Lizard();
-larry.legs = 4;
-larry.scaleColor = "Brown";
-larry.camouflage = false;
-larry.walk();
-Console.WriteLine("A {0} lizard moving at {1} m/s", larry.scaleColor, larry.speed);
+Animal generic_animal = new Animal();
+Lizard larry = new Lizard();
+
+Console.WriteLine("A lizard is {0}", larry.walk());
 ```
 
 ## Private
