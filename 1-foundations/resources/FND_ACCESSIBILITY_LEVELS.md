@@ -33,14 +33,15 @@ In some `Program.cs`:
 
 ```c#
 Automobile generic_auto = new Automobile();
-Car stella = new Car();
+Console.WriteLine("Automobiles go {0}", generic_auto.Accelerate());
 
+Car stella = new Car();
 Console.WriteLine("Cars go {0}", stella.Accelerate());
 ```
 
 ## Private
 
-Classes and Methods that have tagged with the `private` keyword are only accessible from within the class where it's defined. This means that private method can not be called from anywhere outside the class, including derived classes (children).
+Classes and Methods that have tagged with the `private` keyword are only accessible from within the class where it's defined. This means that private methods can not be called from anywhere outside the class, including derived classes (children).
 
 Private methods are intended to be internal functionality. Consider the classes below:
 
@@ -97,6 +98,31 @@ stella.InjectFuel();
 ## Protected
 
 Classes and Methods that have tagged with the `protected` keyword prevent access from outside the class heirarchy (ie. the family); however, `protected` methods are usable from derived classes (i.e. children).
+
+```c#
+// Base class
+class Automobile {
+
+    public string Accelerate() {
+        return "zoom";
+    }
+
+    protected string DeployAirbag() {
+        return "floooom";
+    }
+
+}
+
+// Derived class
+class Car : Automobile {
+
+    public string DetectAccident {
+        this.DeployAirbag();
+    }
+}
+
+
+```
 
 
 ## Internal
