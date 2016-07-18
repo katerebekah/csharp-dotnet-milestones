@@ -55,17 +55,12 @@ class Automobile {
         return "zoom";
     }
 
-    public string Break() {
-        this.SqueezeBreakPads();
-        return "skuuuuuur";
-    }
-
     private string InjectFuel() {
         return "fueling";
     }
 
     private string SqueezeBreakPads() {
-        return "exhale";
+        return "";
     }
 }
 
@@ -103,25 +98,30 @@ Classes and Methods that have tagged with the `protected` keyword prevent access
 // Base class
 class Automobile {
 
-    public string Accelerate() {
-        return "zoom";
+    public string Break() {
+        this.SqueezeBreakPads();
+        return "skuuuuuur";
     }
 
-    protected string DeployAirbag() {
-        return "floooom";
+    protected string SqueezeBreakPads() {
+        return "";
     }
-
 }
 
 // Derived class
 class Car : Automobile {
 
-    public string DetectAccident {
-        this.DeployAirbag();
+    public string UseEmergencyBreak() {
+        this.SqueezeBreakPads();
+        return "skreeech!";
     }
 }
 
+// Usage Example in a Program.cs file somewhere
+Car stella = new Car();
 
+// UseEmergencyBreak method can use the protected SqueezeBreakPads from the Automobile class.
+Console.WriteLine("Applying the break: {0}", stella.UseEmergencyBreak());
 ```
 
 
