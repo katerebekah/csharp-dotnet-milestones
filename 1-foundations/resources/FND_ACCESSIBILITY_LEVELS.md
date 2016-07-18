@@ -133,7 +133,7 @@ For more information: https://msdn.microsoft.com/en-us/library/7c5ka91b.aspx
 
 ## Protected Internal
 
-`protected internal` is the only allowed conbination of multiple access modifiers. 
+`protected internal` is the only allowed conbination of multiple access modifiers.
 
 ## Resources
 * https://msdn.microsoft.com/en-us/library/ba0a1yw2.aspx
