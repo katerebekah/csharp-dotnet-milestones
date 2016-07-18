@@ -129,11 +129,11 @@ class Car : Automobile {
 
 Classes and Methods that have tagged with the `internal` keyword allow access from anywhere within the same compiled DLL (assembly).
 
+For more information: https://msdn.microsoft.com/en-us/library/7c5ka91b.aspx
 
 ## Protected Internal
 
-Classes and Methods that have tagged with the `internal` keyword allow access from anywhere within the same compiled DLL (assembly).
-
+`protected internal` is the only allowed conbination of multiple access modifiers. 
 
 ## Resources
 * https://msdn.microsoft.com/en-us/library/ba0a1yw2.aspx
