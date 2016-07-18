@@ -58,10 +58,6 @@ class Automobile {
     private string InjectFuel() {
         return "fueling";
     }
-
-    private string SqueezeBreakPads() {
-        return "";
-    }
 }
 
 // Usage Example in a Program.cs file somewhere
