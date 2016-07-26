@@ -33,5 +33,4 @@ Now you'll write the implementation code for your three methods, and the operati
 1. Then to get the user to choose. `string = desiredMathProcess = Console.ReadLine ();`
 1. The goal here is that once the user tells the program what operation to perform, it will spit out the numbers forever until you “ctrl+c”.
   `Console.WriteLine(“Ok. I’m going to help produce " + Choice);`
-1. Create the following three methods in your project:
 1. Use `Thread.Sleep(500)` when you output each number to the console to make each number legible (otherwise it goes too fast).
