@@ -1,13 +1,38 @@
 # Collections and Iteration
 
-In JavaScript, you stored a collection objects in one of two constructs:
+C#, provides you with a variety of contructs that allow you to store and access data with respect to traditional Data Structures. Below are the main types of collections/ways to store data:
 
-1. Array
-1. Object
+- Array
+- List
+- Stack
+- Queue
+- Dictionary
 
-In C#, you can store a collection of objects in a larger variety of constructs which are in the `System.Collections.Generic` assembly. I'm only showing code examples for the first two types, since they are the most commonly used. You can read the MSDN docs to learn about the rest.
+Each of the types in the bulleted list above are implemented as `generics`. Generic data structures, allow you to declare a container specifying what objects it will hold.
 
-You can use the `foreach` keyword to iterate over most collections, but collections that are Queues or Stacks are different.
+The `List` and `Array` classes implement the IEnumerable interface. IEnumerable defines a blueprint that allows a developer to use the `foreach` keyword to cycle through all the elements.
+
+### List
+
+```c#
+using System.Collections.Generic // Namespace containing data structures
+
+
+// Somewhere in a Program.cs
+
+// Creates an instance of a List type that will only contain integers.
+// Starts off as empty.
+List<int> myListOfIntegers = new List<int>();
+
+// You can add items to this list via the `Add` method.
+myListOfIntegers.Add(77);
+myListOfIntegers.Add(108);
+```
+
+### Array
+
+
+### Dictionary
 
 1. [Dictionary](https://msdn.microsoft.com/en-us/library/xfhwa508.aspx) - Which is a collection of key/value pairs, just like an object in JavaScript. The big difference is that the key can be any type. One thing to remember is that you can't add the same key to a Dictionary more than once.
     ```cs
