@@ -6,9 +6,9 @@ In contrast, C# is an example of a *context-bound* programming language. This is
 
 ## Character Classes
 
-Character Classes are used for providing characters you like to match. They are delimited by `[` and `]`. Inside the square brackets you would put a sequence of characters. Character classes, by default, matches one character and are written like: `[abcdef]`. This means "you can match 'a' or 'b' or 'c' or 'd' or 'e' or 'f'".
+Character Classes are used for providing characters you like to match. They are delimited by `[` and `]`. Inside the square brackets you would put a sequence of characters. Character classes, by default, matches one character and are written like: `[abcdef]`. This means you can match 'a' or 'b' or 'c' or 'd' or 'e' or 'f'.
 
-Character Classes can contain letters, numbers, ranges of numbers (ex. `0-9`) , ranges of letters (ex. `a-z`) or any combination there of. The following is a valid character class that will match any digit or uppercase letter, `[0-9A-Z]`.
+Character Classes can contain letters, numbers, ranges of numbers (ex. `0-9`) , ranges of letters (ex. `a-z`) or any combination thereof. The following is a valid character class that will match any digit or uppercase letter, `[0-9A-Z]`.
 
 Consider the following example. Let's say you want match the first letter of the following string, `f`:
 
@@ -46,7 +46,7 @@ For every character class range, there's a shorthand that can be used in it's pl
 
 ## Printable and Non-Printable Characters
 
-Beyond the world of letters, symbols and numbers, there's a collection of other characters that do not belong to an alphabet and have no visual representation in everyday language usages. These are called *Non-Printable Characters*. Non-Printable, while they may not seen on a computer screen, can still be found and matched with regular expressions!
+Beyond the world of letters, symbols and numbers, there's a collection of other characters that do not belong to an alphabet and have no visual representation in everyday language. These are called *Non-Printable Characters*. Non-Printable, while they may not seen on a computer screen, can still be found and matched with regular expressions!
 
 First, let's list out the non-Printable characters in relation to a simple sentence in English:
 
@@ -62,7 +62,7 @@ First, let's list out the non-Printable characters in relation to a simple sente
 
 ### How to match spaces
 
-Spaces deserve their own section since are represent the abscence of a character, but still take up a place on your computer keyboard. Spaces are created by using the SPACEBAR or TAB keys.
+Spaces deserve their own section since they represent the abscence of a character, but still take up a place on your computer's keyboard. Spaces are created by using the SPACEBAR or TAB keys.
 
 - `\t` matches a TAB
 - `\s` matches a space created by a SPACEBAR
@@ -78,7 +78,7 @@ Let's say that you want to match more than one character in a string. Until now,
 [a-z]\w\w[a-z] # Combinations of shorthands and ranges works as well
 ```
 
-Building a proper regex this way can be nearly impossible if you don't know the word length beforehand. To address this, we have Greedy Operators. Greed Operators are shorthands that repeat a preceeding pattern for you! Greedy Operators can follow any regex shorthand or Character Class, but can never be used alone. The following are Greedy operators with their meanings:
+Building a proper regex this way can be nearly impossible if you don't know the length of the word beforehand. To address this, Greedy Operators were conceived. Greedy Operators are shorthands that repeat a preceeding pattern for you! Greedy Operators can follow any regex shorthand or Character Class, but can never be used alone. The following are Greedy Operators and their meanings:
 
 - `+` match `one or more` occurances
 - `{n,m}` match `atleast n but no more than m` occurances (n and m are integers).
@@ -94,5 +94,15 @@ Again let's say we want to match a 4 letter lowercased word. Using Greedy Operat
 With the examples above, they not only match a 4 letter word, they'll match any word that has atleast one character. This means, those same patterns would work for `love`, `like`, `a`, `french`, `psychology`, `elephant` and so on...
 
 ## Groups and Captures
+
+Always remember, in the midst of software development is laziness. The drive to minimize effort to do repeated tasks. This manifests in regular expressions as Groups and Captures. This wonderful feature allows you to work with an entire pattern as a single item allowing you to do things like apply Greedy Operators and extract information!
+
+Let's say that you want to write a pattern that matches the string `FuzzyWuzzy`, `FuzzyFuzzy` and `WuzzyFuzzy`. Using groups, we can use the repeated pattern of `uzzy` to match against:
+
+```
+([WF]uzzy)+
+```
+
+
 
 ## Zero-Width Assertions (Advanced Material)
