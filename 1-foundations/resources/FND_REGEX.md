@@ -16,7 +16,7 @@ Consider the following example. Let's say you want match the first letter of the
 french fries
 ```
 
-Any character class that contains a lowercase `f` will match the first letter in `french`:
+Any character class that contains a lowercase `f` will match the first letter in the word `french`:
 
 ```
 [abdef] # This works
