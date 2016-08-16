@@ -97,7 +97,7 @@ With the examples above, they not only match a 4 letter word, they'll match any 
 
 Always remember, in the midst of software development is laziness. The drive to minimize effort to do repeated tasks. This manifests in regular expressions as Groups and Captures. This wonderful feature allows you to work with an entire pattern as a single item allowing you to do things like apply Greedy Operators and extract information!
 
-Let's say that you want to write a pattern that matches the string `FuzzyWuzzy`, `FuzzyFuzzy` and `WuzzyFuzzy`. Using groups, we can use the repeated pattern of `uzzy` to match against:
+Let's say that you want to write a pattern that matches the string `FuzzyWuzzy`, `FuzzyFuzzyWuzzyFuzzy` and `WuzzyFuzzy`. Using groups, we can use the repeated pattern of `uzzy` to match against:
 
 ```
 ([WF]uzzy)+
