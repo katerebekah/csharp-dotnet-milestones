@@ -81,6 +81,7 @@ Let's say that you want to match more than one character in a string. Until now,
 Building a proper regex this way can be nearly impossible if you don't know the length of the word beforehand. To address this, Greedy Operators were conceived. Greedy Operators are shorthands that repeat a preceeding pattern for you! Greedy Operators can follow any regex shorthand or Character Class, but can never be used alone. The following are Greedy Operators and their meanings:
 
 - `+` match `one or more` occurances
+- `{n}` match `exactly n` occurances (n is an integer).
 - `{n,m}` match `atleast n but no more than m` occurances (n and m are integers).
 - `?` match `zero or one` occurances. In order words, the pattern is 'optional'
 - `*` means match `zero or more` occurances.
@@ -95,14 +96,25 @@ With the examples above, they not only match a 4 letter word, they'll match any 
 
 ## Groups and Captures
 
-Always remember, in the midst of software development is laziness. The drive to minimize effort to do repeated tasks. This manifests in regular expressions as Groups and Captures. This wonderful feature allows you to work with an entire pattern as a single item allowing you to do things like apply Greedy Operators and extract information!
+Always remember, in the midst of software development is laziness: the drive to minimize effort to do repeated tasks. This manifests in regular expressions as Groups and Captures. This wonderful feature allows you to work with an entire pattern as a single item allowing you to do things like apply Greedy Operators and extract information! Here's a list of groupings and what they do assuming `\w+` is the pattern we want to match:
+
+- `(\w+)` capture what's matched for me to use later.
+- `(?:\w+)` group what's matched but I don't need it.
+- `(?<a_name>\w+)` capture what's matched and give it the name in side the `<>`
 
 Let's say that you want to write a pattern that matches the string `FuzzyWuzzy`, `FuzzyFuzzyWuzzyFuzzy` and `WuzzyFuzzy`. Using groups, we can use the repeated pattern of `uzzy` to match against:
 
 ```
-([WF]uzzy)+
+(?:[WF]uzzy)+
 ```
 
+The above pattern takes `[WF]uzzy` and repeats it so we can match all the Fuuzy and Wuzzy we want regardless of order or number of occurances.
+
+Another example. What if I wanted to extract all the month and year from date strings with the format `Oct 15, 2018`? I could use named captures to assign the matched parts to useful variable names:
+
+```
+(?<month>\w+)\s(?<day>\d+),\s(?<year>\d+)
+```
 
 
 ## Zero-Width Assertions (Advanced Material)
