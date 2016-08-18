@@ -110,11 +110,20 @@ Let's say that you want to write a pattern that matches the string `FuzzyWuzzy`,
 
 The above pattern takes `[WF]uzzy` and repeats it so we can match all the Fuuzy and Wuzzy we want regardless of order or number of occurances.
 
-Another example. What if I wanted to extract all the month and year from date strings with the format `Oct 15, 2018`? I could use named captures to assign the matched parts to useful variable names:
+Another example. What if I wanted to extract the day, month and year from date strings with the format `Oct 15, 2018`? I could use named captures to assign the matched parts to useful variable names:
 
 ```
 (?<month>\w+)\s(?<day>\d+),\s(?<year>\d+)
 ```
 
+Using the above pattern, `Nov 10, 2007` would result in 3 dictionary with the results:
+
+```
+{
+    "month": "Nov",
+    "day":   "10",
+    "year":  "2007"
+}
+```
 
 ## Zero-Width Assertions (Advanced Material)
