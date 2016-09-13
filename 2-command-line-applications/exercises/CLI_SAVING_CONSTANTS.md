@@ -1,6 +1,6 @@
 # Saving Constants
 
-For this exercise you will create a CLI application that will Read, Delete and Create entries to a database. 
+For this exercise you will create a CLI application that will Read, Delete and Create entries to a database.
 
 The goal of this project is to help students learn TDD with the Entity Framework and Moq. The students will be creating a trivial ERD and Command Line Application with this project.
 
