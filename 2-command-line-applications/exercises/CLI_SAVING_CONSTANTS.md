@@ -37,7 +37,7 @@ The user will enter expressions or commands that do work on a backend database.
 Your application should accept the following commands:
 
 - `quit` and `exit` - exits the program
-- `lastq` - prints the last entered command or expression
+- `lastq` - prints the last entered command or expression even it was unsuccessful.
 
 ### Constant Expressions
 
