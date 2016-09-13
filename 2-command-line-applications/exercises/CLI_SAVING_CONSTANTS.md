@@ -59,4 +59,6 @@ Constants have one character lenght names that holds a positive or negative inte
    = 'x' is now free!
 >> x = -4
    = saved 'x' as '-4'
+>> exit
+   Bye!!!
 ```
