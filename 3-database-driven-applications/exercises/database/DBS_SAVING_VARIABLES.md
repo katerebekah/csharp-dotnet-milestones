@@ -1,4 +1,4 @@
-# Saving Constants
+# Saving Variables
 
 For this exercise you will create a CLI application that will Read, Delete and Create entries within a database.
 
@@ -12,7 +12,7 @@ This solution contains:
 
 ## Rules
 
-- Create a model and matching migration for saving constants  usign created or supplied ERD.
+- Create a model and matching migration for saving variables  usign created or supplied ERD.
 - Implement the Repository Pattern
 - There should be Unit Tests on all classes and methods you create.
 - Your solution should have at least 2 total projects. Unit Tests should be in it's own project.
@@ -38,9 +38,9 @@ Your application should accept the following commands:
 - `quit` and `exit` - exits the program
 - `lastq` - prints the last entered command or expression **even if it was unsuccessful**.
 
-### Constant Expressions
+### Variable Expressions
 
-Constants have one character length names that holds a positive or negative integer.Relative to constant, your our application should support the following expressions and commands:
+Variables have one character length names that holds a positive or negative integer.Relative to variable, your our application should support the following expressions and commands:
 
 - `a = 4` - creates an entry in the database where `a` is `4`
 - `clear a`, `remove a` and `delete a` - removes the saved entry for `a` from the database
