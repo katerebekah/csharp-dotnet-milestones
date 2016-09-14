@@ -44,7 +44,6 @@ Variables have one character length names that holds a positive or negative inte
 
 - `a = 4` - creates an entry in the database where `a` is `4`
 - `clear a`, `remove a` and `delete a` - removes the saved entry for `a` from the database
-- `clear all`, `remove all` and `delete all` - removes all saved entries from the database
 
 
 ```sh
@@ -60,4 +59,29 @@ Variables have one character length names that holds a positive or negative inte
    = saved 'x' as '-4'
 >> exit
    Bye!!!
+```
+
+### Database Commands
+
+- `clear all`, `remove all` and `delete all` - removes all saved entries from the database
+- `show all` - prints out all variables (with their values) in tabular form saved within the database. Note: Variables should be listed in alphabitcal order. See example below.
+
+```sh
+>> x = 3
+   = saved 'x' as '3'
+>> b = 4
+   = saved 'b' as '4'
+>> show all
+    ______________
+   | Name | Value |
+   |--------------|
+   |  b   |   3   |
+   |  x   |   4   |
+   |______|_______|
+>> clear all
+   = deleted all items from database!
+>> show all
+   = Database empty! Nothing to show.
+>> quit
+   Bye!
 ```
