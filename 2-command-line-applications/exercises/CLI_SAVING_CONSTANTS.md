@@ -1,8 +1,8 @@
 # Saving Constants
 
-For this exercise you will create a CLI application that will Read, Delete and Create entries to a database.
+For this exercise you will create a CLI application that will Read, Delete and Create entries within a database.
 
-The goal of this project is to help students learn TDD with the Entity Framework and Moq. The students will be creating a trivial ERD and Command Line Application with this project.
+The goal of this project is to help students learn TDD with the Entity Framework and Moq. Students will be supplied a trivial ERD and Command Line Application with this project.
 
 This solution contains:
 
@@ -12,8 +12,7 @@ This solution contains:
 
 ## Rules
 
-- Create a very simple ERD representing the Model for this exercise
-- Create a model and matching migration for saving
+- Create a model and matching migration for saving constants  usign created or supplied ERD.
 - Implement the Repository Pattern
 - There should be Unit Tests on all classes and methods you create.
 - Your solution should have at least 2 total projects. Unit Tests should be in it's own project.
@@ -37,11 +36,11 @@ The user will enter expressions or commands that do work on a backend database.
 Your application should accept the following commands:
 
 - `quit` and `exit` - exits the program
-- `lastq` - prints the last entered command or expression even it was unsuccessful.
+- `lastq` - prints the last entered command or expression **even if it was unsuccessful**.
 
 ### Constant Expressions
 
-Constants have one character lenght names that holds a positive or negative integer. Your application should support the following expressions and commands:
+Constants have one character length names that holds a positive or negative integer.Relative to constant, your our application should support the following expressions and commands:
 
 - `a = 4` - creates an entry in the database where `a` is `4`
 - `clear a`, `remove a` and `delete a` - removes the saved entry for `a` from the database
