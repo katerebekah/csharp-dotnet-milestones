@@ -35,8 +35,3 @@ git checkout -b version-4
     ```
 1. Once you've created all of your species, give them some methods and properties. Include several methods on your Animal and/or genus classes that can be overridden and then override them in your species classes.
 1. Create some overloaded methods on some of your species (or genus) classes.
-
-
-## Notes
-
-This wil be the last exercise that you do in C# Pad. By the time you are done with this exercise, hopefully everyone has Windows and Visual Studio installed.

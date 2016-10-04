@@ -13,7 +13,7 @@ string animalName () {
 }
 ```
 
-Copy pasta that code into a [C# Pad](http://csharppad.com/) window and click the **Go** button to compile it. Then type in `Console.WriteLine(animalName());` and press **Go** again and you'll see the output of "Lizard".
+Copy pasta that code into Code, or Visual Studio, and compile.
 
 With this method, you are telling the C# compiler that `animalName()` will always return a `string` value, and that the `name` variable will always contains a `string` value. If you violate this contract, the friendly compiler will tell you.
 
@@ -91,9 +91,9 @@ class Animal {
 }
 ```
 
-Copy pasta that code into a [C# Pad](http://csharppad.com/) window and click the **Go** button to compile it.
+Copy pasta that code into Code, or Visual Studio and compiled.
 
-Then type in the following code and press **Go** again.
+Then type in the following code and compile again.
 
 ```c#
 Animal lizard = new Animal();
@@ -151,9 +151,7 @@ A namespace is simply a way to group classes and other types into a logical grou
 
 That's called namespacing.
 
-In C#, you can use the `namespace` keyword to create different namespaces.
-
-We can't use namespaces in C# Pad, so we'll wait until all installs are done.
+Luckily, in C#, you can use the `namespace` keyword to create different namespaces.
 
 
 # External Resources

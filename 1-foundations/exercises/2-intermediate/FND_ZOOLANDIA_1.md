@@ -23,7 +23,7 @@ touch Zoolandia.cs
 
 ## Instructions
 
-1. Visit [C# Pad](http://www.csharppad.com) and create your first C# class - the Animal class. Create some simple properties and methods on Animal. You are going to create some derived classes that inherit from Animal, so make sure that the properties/methods you add are general to **all** Animals (e.g. name, height, weight, etc).
+1. Create your first C# class - the Animal class. Create some simple properties and methods on Animal. You are going to create some derived classes that inherit from Animal, so make sure that the properties/methods you add are general to **all** Animals (e.g. name, height, weight, etc).
 
     ##### Example property/method definition
 
@@ -62,4 +62,4 @@ touch Zoolandia.cs
 
 ## Submit to Github
 
-Once you are happy with your C# Pad code, make sure that you copy all of it into the `Zoolandia.cs` file that you created above and then commit & push it.
+Once you are happy with your code, make sure that you commit & push it.
