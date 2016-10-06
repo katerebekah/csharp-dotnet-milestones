@@ -28,7 +28,7 @@ git checkout -b version-2
 
 1. Use `Console.WriteLine();` to output the name of each of your animal instances.
 
-  ```
+  ```cs
   MyAnimal animalInstance = new MyAnimal();
   Console.WriteLine(animalInstance.name);
   ```

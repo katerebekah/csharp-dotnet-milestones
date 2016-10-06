@@ -1,4 +1,4 @@
-# Zoolandia - Creating Your Zoo
+# Zoolandia - Purchasing Animals for your Zoo
 
 ## Setup
 
@@ -33,6 +33,7 @@ public class Quagga : Equus
 	// add more properties and methods
 }
 ```
+
 1. Once you've created all of your species, give them some methods and properties. Include several methods on your Animal and/or genus classes that can be overridden and then override them in your species classes.
 1. Create some overloaded methods on some of your species (or genus) classes.
 
