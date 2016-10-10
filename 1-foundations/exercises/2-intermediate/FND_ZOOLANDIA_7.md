@@ -9,7 +9,7 @@ git checkout -b version-7
 
 ## Instructions
 
-For this last Zoolandia exercises for the Foundations Milestone, you need to define all of the Habitats in which all of the animals live. You'll use the [aggregation](../resources/FND_INHERIT_COMPOSE_AGGREGATE.md#aggregation) pattern to assign animals to each Habitat.
+For this last Zoolandia exercises for the Foundations Milestone, you need to define all of the Habitats in which all of the animals live. You'll use the [aggregation](../../resources/FND_INHERIT_COMPOSE_AGGREGATE.md#aggregation) pattern to assign animals to each Habitat.
 
 In this example code, I create the parent `Habitat` class that all others will derive from, and since every habitat in my Zoo will have animals in it, each specific habitat class will inherit that `inhabitant` property.
 
