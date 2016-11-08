@@ -65,43 +65,18 @@ This will work on any system, and you need to have the Firefox browser installed
 
 Install [DB Browser for SQLite](http://sqlitebrowser.org/), which is a free tool to explore a SQLite database and execute queries on the data.
 
-## Populating the Database
+## Getting the Database
 
 1. Create a directory for your work.
 
     ```
     mkdir ~/workspace/chinook
     ```
-2. Move all extracted files from the archive to that directory.
+1. Move the SQLite database file from the archive to that directory.
 
     ```
-    cp *.* ~/workspace/chinook
+    cp Chinook_Sqlite.sqlite ~/workspace/chinook
     ```
-
-3. Create your database. This will create the file and put you into the SQLite command line utility.
-
-    ```
-    cd ~/workspace/chinook
-    sqlite3 chinook.db
-
-    SQLite version 3.8.10.2 2015-05-20 18:17:19
-    Enter ".help" for usage hints.
-    sqlite>
-    ```
-
-4. Import the initial data SQL file.
-
-    ```
-    sqlite> .read Chinook_Sqlite.sql
-    ```
-
-5. Then import the SQL file that will set up the rule to have primary keys auto-increment.
-
-    ```
-    sqlite> .read Chinook_Sqlite_AutoIncrementPKs.sql
-    ```
-
-
 
 ## Instructions
 
