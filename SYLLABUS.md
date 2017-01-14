@@ -3,20 +3,22 @@
 This is a rouch outline of major topics covered throughout the course oragnized milestone-wise. The topics listed under each milestone are **not** listed in chronological order.
 
 ## Foundations
-- Basics of HTTP
-- What are the .NET Framework and C#?
+- Basics of HTTP (Requests & Responses)
+- AngularJS Refresher
+- Functions
 - Principles of Object Oriented Programming
 - C# Language Fundamentals
-- Unit Testing
+- Intro to Unit Testing
 
 ## Databases
 - Intro to Databases
-- SQL
-- Entity Framework
+- Structured Query Language (SQL)
+- Entity Framework (ORMs)
   - Models
   - DbContext
   - Migrations
   - Repository Pattern
+- Data Abstraction Layer (DAL) & Mocking
 
 ## Web Applications & APIs
 
