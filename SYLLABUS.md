@@ -21,10 +21,11 @@ This is a rouch outline of major topics covered throughout the course oragnized 
 
 ## Web Applications & APIs
 
+- Model-View-Controller (MVC) Pattern
 - How does the internet work?
 - RESTful APIs
 - .NET Web API
-- MVC Pattern
 - ASP.NET MVC with Razor
 - ViewModels
 - Security and Authentication
+- Deploying a Web Application
