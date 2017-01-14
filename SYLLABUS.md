@@ -17,8 +17,8 @@ This is a rouch outline of major topics covered throughout the course oragnized 
   - Models
   - DbContext
   - Migrations
-  - Repository Pattern
-- Data Abstraction Layer (DAL) & Mocking
+- Repository Pattern
+- Unit Testing DALs with Mocks
 
 ## Web Applications & APIs
 
