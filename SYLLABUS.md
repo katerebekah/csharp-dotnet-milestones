@@ -5,19 +5,18 @@ This is a rouch outline of major topics covered throughout the course oragnized 
 ## Foundations
 - Basics of HTTP (Requests & Responses)
 - AngularJS Refresher
-- Functions
 - Principles of Object Oriented Programming
 - C# Language Fundamentals
 - Intro to Unit Testing
 
 ## Databases
 - Intro to Databases
-- Structured Query Language (SQL)
-- Entity Framework (ORMs)
-  - Models
+- Functions & Structured Query Language (SQL)
+- Entity Framework (ORM)
+  - Models and Model Relationships
   - DbContext
   - Migrations
-- Repository Pattern
+- The Data Abstraction Layer (DAL) & Repository Pattern
 - Unit Testing DALs with Mocks
 
 ## Web Applications & APIs
