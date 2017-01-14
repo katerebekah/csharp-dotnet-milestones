@@ -1,10 +1,10 @@
 # Evening Course Syllabus
 
-This is a rouch outline of major topics covered throughout the course oragnized milestone-wise. The topics listed under each milestone are **not** listed in chronological order.
+This is a rouch outline of major topics covered throughout the course oragnized milestone-wise. The topics listed under each milestone may **not** be listed in chronological order; however, each topic depends on the topics that proceed it.
 
 ## Foundations
 - Basics of HTTP (Requests & Responses)
-- AngularJS Refresher
+- HTML & AngularJS Refresher
 - Principles of Object Oriented Programming
 - C# Language Fundamentals
 - Intro to Unit Testing
