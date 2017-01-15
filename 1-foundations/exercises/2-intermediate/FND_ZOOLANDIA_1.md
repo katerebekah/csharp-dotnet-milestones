@@ -27,9 +27,9 @@ dotnet new
 touch .gitignore
 ```
 
-Here is the .NET Core .gitignore: https://github.com/dotnet/core/blob/master/.gitignore
+(here is the .NET Core .gitignore: https://github.com/dotnet/core/blob/master/.gitignore)
 
-or
+OR
 
 ```
 yo aspnet
