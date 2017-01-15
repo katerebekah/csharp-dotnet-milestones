@@ -18,8 +18,24 @@ git add .
 git commit -m "Initial commit"
 git push origin master
 git checkout -b version-1
-touch Zoolandia.cs
 ```
+
+Next, initialize a new .NET Core project using the CLI or the ASP.NET Generator
+
+```bash
+dotnet new
+touch .gitignore
+```
+
+(here is the .NET Core .gitignore: https://github.com/dotnet/core/blob/master/.gitignore)
+
+OR
+
+```
+yo aspnet
+```
+
+and follow the instructions for a Console Application.
 
 # Instructions
 
@@ -48,9 +64,9 @@ Using namespaces is another way to organize your classes at the code level. Thin
         {
             public string name { get; set; }
 
-            public static void sleep ()
+            public void sleep ()
             {
-                Console.WriteLine("Animal is now sleeping");
+                Console.WriteLine("ZZzzzzzzz...");
             }
         }
     }
