@@ -1,7 +1,7 @@
 
-1. Visit virtalbox.org
-2. Click "Download Virtual Box 5.0"
-3. Choose the "amd64" link next to "VirtualBox 5.0.X for OS X hosts"
+1. Visit [virtalbox.org](https://www.virtualbox.org/)
+2. Click "Download Virtual Box 5.1"
+3. Choose the [OS X hosts](http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-OSX.dmg) link under the "VirtualBox 5.1.14 platform packages" bullet point.
 4. Open the dmg that is downloaded
 5. Run 'VirtualBox.pkg'
 
