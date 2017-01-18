@@ -12,6 +12,24 @@
 3. type in your password when requested
 4. Click 'Close'
 
+
+## Using an Instructor provided VM
+
+### Import the VM
+1. First, [Download the VM](https://s3.amazonaws.com/nss-vm-images/windows/E2v2.ova). Save it to a location where you can easily find it.
+2. Once the download finishes, Select the "Import Applicance".
+3. Use the dialog to navigate to location of the file downloaded in Step 1. (The file will be named "E2v2") and click "Ok".
+4. Make sure the checkbox for "Reinitialize the MAC Address for all network cards" is checked.
+5. Click "Import"
+
+### First Windows Boot
+The tVM should appear in your Left Pane named, "NSS E2".
+1. Select the VM named "NSS E2" and click start.
+2. Once booted up, click anywhere on the screen and enter `change_me_now` as the password.
+
+
+## To Install Windows from Scratch
+
 ### Creating the Virtual Machine
 
 1. Open VirtualBox.app
