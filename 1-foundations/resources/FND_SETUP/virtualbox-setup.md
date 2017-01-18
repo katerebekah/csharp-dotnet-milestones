@@ -1,7 +1,7 @@
 
-1. Visit virtalbox.org
-2. Click "Download Virtual Box 5.0"
-3. Choose the "amd64" link next to "VirtualBox 5.0.X for OS X hosts"
+1. Visit [virtalbox.org](https://www.virtualbox.org/)
+2. Click "Download Virtual Box 5.1"
+3. Choose the [OS X hosts](http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-OSX.dmg) link under the "VirtualBox 5.1.14 platform packages" bullet point.
 4. Open the dmg that is downloaded
 5. Run 'VirtualBox.pkg'
 
@@ -11,6 +11,24 @@
 2. Click 'Install'
 3. type in your password when requested
 4. Click 'Close'
+
+
+## Using an Instructor provided VM
+
+### Import the VM
+1. First, [Download the VM](https://s3.amazonaws.com/nss-vm-images/windows/E2v2.ova). Save it to a location where you can easily find it.
+2. Once the download finishes, Select the "Import Applicance".
+3. Use the dialog to navigate to location of the file downloaded in Step 1. (The file will be named "E2v2") and click "Ok".
+4. Make sure the checkbox for "Reinitialize the MAC Address for all network cards" is checked.
+5. Click "Import"
+
+### First Windows Boot
+The tVM should appear in your Left Pane named, "NSS E2".
+1. Select the VM named "NSS E2" and click start.
+2. Once booted up, click anywhere on the screen and enter `change_me_now` as the password.
+
+
+## To Install Windows from Scratch
 
 ### Creating the Virtual Machine
 
