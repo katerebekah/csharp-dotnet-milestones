@@ -23,7 +23,8 @@
 5. Click "Import"
 
 ### First Windows Boot
-The tVM should appear in your Left Pane named, "NSS E2".
+The VM should appear in your Left Pane named, "NSS E2".
+
 1. Select the VM named "NSS E2" and click start.
 2. Once booted up, click anywhere on the screen and enter `change_me_now` as the password.
 
