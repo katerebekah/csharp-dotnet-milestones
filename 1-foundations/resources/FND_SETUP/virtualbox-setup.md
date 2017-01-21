@@ -16,6 +16,7 @@
 ## Using an Instructor provided VM
 
 ### Import the VM
+
 1. First, [Download the VM](https://s3.amazonaws.com/nss-vm-images/windows/E2v2.ova). Save it to a location where you can easily find it.
 2. Once the download finishes, Select the "Import Applicance".
 3. Use the dialog to navigate to location of the file downloaded in Step 1. (The file will be named "E2v2") and click "Ok".
