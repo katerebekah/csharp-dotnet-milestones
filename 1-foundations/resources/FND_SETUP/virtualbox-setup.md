@@ -1,5 +1,5 @@
 
-1. Visit [virtalbox.org](https://www.virtualbox.org/)
+1. Visit [virtualbox.org](https://www.virtualbox.org/)
 2. Click "Download Virtual Box 5.1"
 3. Choose the [OS X hosts](http://download.virtualbox.org/virtualbox/5.1.14/VirtualBox-5.1.14-112924-OSX.dmg) link under the "VirtualBox 5.1.14 platform packages" bullet point.
 4. Open the dmg that is downloaded
@@ -18,7 +18,7 @@
 ### Import the VM
 
 1. First, [Download the VM](https://s3.amazonaws.com/nss-vm-images/windows/E2v2.ova). Save it to a location where you can easily find it.
-2. Once the download finishes, Select the "Import Applicance".
+2. Once the download finishes, Select the "Import Appliance".
 3. Use the dialog to navigate to location of the file downloaded in Step 1. (The file will be named "E2v2") and click "Ok".
 4. Make sure the checkbox for "Reinitialize the MAC Address for all network cards" is checked.
 5. Click "Import"
