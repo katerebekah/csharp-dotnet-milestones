@@ -1,0 +1,26 @@
+{
+    "Server Side Foundations":
+    [
+        {
+            "Introduction" : {
+                "Instruction": [],
+                "In-Class": [],
+                "Assignment": [],
+                "Challenge": [],
+                "Treehouse": []
+            }
+        },
+        {
+            "Internet and HTTP" : {}
+        },
+        {
+            ".NET Framework": {}
+        },
+        {
+            "C# Language": {
+                "C# Syntax" : {},
+                "C# Style Guide" : {}
+            }
+        }
+    ]
+}
